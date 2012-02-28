@@ -1,0 +1,91 @@
+@import 'less/grid.less';
+
+
+//////////
+// GRID //
+//////////
+
+// Specify the number of columns and set column and gutter widths
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+
+// Remove the definition below for a pixel-based layout
+@total-width: 100%;
+
+
+////////////
+// LAYOUT //
+////////////
+
+#globalbar {
+	background-color: #003659;
+	height: 36px;
+	#navbar {
+		background-color: #cccccc;
+		height: 36px;
+	}
+}
+
+#container, #navbar {margin: 0 auto; overflow: hidden;}
+
+	header,
+	nav#access,
+	footer	{
+		.column(12);
+	}
+			
+	section#content { 
+		section#menu-rapido,
+		section#ultimas-pautas,
+		section#ultimos-artigos,
+		section#destaque-fotos,
+		section#proximos-eventos {
+			.column(4); background: #cccccc;
+		}
+
+		section#destaque-fotos {				
+			.push(4);
+		}
+	}
+
+@media screen and (max-width: 600px) {
+
+	section#content { 
+		section#menu-rapido,
+		section#ultimas-pautas,
+		section#ultimos-artigos,
+		section#destaque-fotos,
+		section#proximos-eventos {
+			.column(12); background: #cccccc;
+		}
+
+		section#destaque-fotos {				
+			.push(0);
+		}
+	}
+}
+
+@media screen and (min-width: 320px) { 
+	#container, #navbar { width: 288px; } 
+}
+
+@media screen and (min-width: 480px) { 
+	#container, #navbar { width: 432px; }
+}
+
+@media screen and (min-width: 600px) {
+	#container, #navbar { width: 576px; }
+}
+
+@media screen and (min-width: 1024px) {
+	#container, #navbar { width: 864px; }
+}
+
+@media screen and (min-width: 1280px) {
+	#container, #navbar { width: 1152px; }
+}
+
+@media screen and (min-width: 2560px) {
+	#container, #navbar { width: 1296px; }
+}
