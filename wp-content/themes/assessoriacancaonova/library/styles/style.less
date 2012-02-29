@@ -4,21 +4,6 @@ body {
 font-size: 62.5%;
 }
 
-
-////////////
-// COLORS //
-////////////
-
-@blue-0: #0099FF;
-
-@blue-10: (lighten(@blue-0,-7,5%));		/* #0084DB */
-@blue-20: (lighten(@blue-0,-15%));		/* #006BB3 */
-@blue-30: (lighten(@blue-0,-22,5%));	/* #00568F */
-@blue-40: (lighten(@blue-0,-30%));		/* #003D66 */
-@blue-50: (lighten(@blue-0,-37,5%));	/* #002842 */
-@blue-60: (lighten(@blue-0,-42,5%));	/* #001829 */
-
-
 ////////////////
 // TYPOGRAPHY //
 ////////////////
@@ -47,10 +32,19 @@ font-size: 62.5%;
 
 }
 
-#container-content {
-	h3 { font-size: 1.8em; line-height: 2em; color: @blue-20; }
-	h4 { color: @blue-30; }
-}
+
+////////////
+// COLORS //
+////////////
+
+@blue-0: #0099FF;
+
+@blue-10: (lighten(@blue-0,-7,5%));		/* #0084DB */
+@blue-20: (lighten(@blue-0,-15%));		/* #006BB3 */
+@blue-30: (lighten(@blue-0,-22,5%));	/* #00568F */
+@blue-40: (lighten(@blue-0,-30%));		/* #003D66 */
+@blue-50: (lighten(@blue-0,-37,5%));	/* #002842 */
+@blue-60: (lighten(@blue-0,-42,5%));	/* #001829 */
 
 
 //////////
@@ -172,17 +166,10 @@ font-size: 62.5%;
 			line-height: 36px;
 			}
 		li:hover {
-			border-left: 1px solid #C8CCCC;
-			border-right: 1px solid #C8CCCC;
-			background: #c8cccc; /* Old browsers */
-			background: -moz-linear-gradient(top, #c8cccc 1%, #e0e0e0 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#c8cccc), color-stop(100%,#e0e0e0)); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(top, #c8cccc 1%,#e0e0e0 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(top, #c8cccc 1%,#e0e0e0 100%); /* Opera 11.10+ */
-			background: -ms-linear-gradient(top, #c8cccc 1%,#e0e0e0 100%); /* IE10+ */
-			background: linear-gradient(top, #c8cccc 1%,#e0e0e0 100%); /* W3C */
-			box-shadow: 0 0 4px -1px #888888 inset;
-
+			border-left: 1px solid #003659;
+			border-right: 1px solid #003659;
+			box-shadow: 0px 5px 5px #B1B2B2 inset;
+			background-color: #C8CCCC;
 			}
 		ul {
 			margin: 0;
