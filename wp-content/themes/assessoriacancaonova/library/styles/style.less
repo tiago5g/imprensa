@@ -1,5 +1,33 @@
 @import 'less/grid.less';
 
+////////////////
+// TYPOGRAPHY //
+////////////////
+
+@font-face {
+    font-family: 'Humanst521BTRoman';
+    src: url('../../font/humanist_521_bt-webfont.eot');
+    src: url('../../font/humanist_521_bt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../font/humanist_521_bt-webfont.woff') format('woff'),
+         url('../../font/humanist_521_bt-webfont.ttf') format('truetype'),
+         url('../../font/humanist_521_bt-webfont.svg#Humanst521BTRoman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Humnst777BTRoman';
+    src: url('../../font/hum777n-webfont.eot');
+    src: url('../../font/hum777n-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../font/hum777n-webfont.woff') format('woff'),
+         url('../../font/hum777n-webfont.ttf') format('truetype'),
+         url('../../font/hum777n-webfont.svg#Humnst777BTRoman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 
 //////////
 // GRID //
@@ -19,13 +47,69 @@
 ////////////
 
 #globalbar {
-	background-color: #003659;
+	background-color: #E0E0E0;
 	height: 36px;
-	#navbar {
-		background-color: #cccccc;
-		height: 36px;
-	}
+		#navbar	{ 
+			height: 36px;
+			margin: 0 auto;
+			font-size: 12px;
+			background-color: #E0E0E0;
+			ul {
+				width: auto;
+				margin: 0;
+				display: inline;
+				}
+			ul li {
+				float: left;
+				}
+			#top-nav { 
+				float: left;
+				font-family: "Humanst521BTRoman", Arial, Helvetica, sans-serif;
+				text-transform: uppercase;
+				padding: 0 0 0 0.5em;
+				
+				a { 
+					margin: .25em 0 0;
+					padding: 0 0.5em;
+					display: block;
+					line-height: 2.5em;
+					color: #0073BF;
+					text-decoration: none;
+					}
+				a:hover {
+					border-bottom: 0.25em solid #0073BF;
+					}
+				ul { 
+					margin: 0;
+					}
+			}
+		} 
 }
+
+
+
+#top-nav  			{ float: left; font-family: "Humanst521BTRoman", Arial, Helvetica, sans-serif; text-transform: uppercase; padding: 0 0 0 0.5em; }
+#top-nav a 			{ margin: .25em 0 0; padding: 0 0.5em; display: block; line-height: 2.5em; color: #0073BF; text-decoration: none; }
+#top-nav a:hover 	{ border-bottom: 0.25em solid #0073BF; }
+#top-nav ul 		{ margin: 0; }
+
+#signature				{ height: 108px; }
+#signature a.marca		{ height: 6em; float: left; }
+#signature a.marca img 	{ margin: 1.5em 0 0 0.833em; padding: 0.5em 1.5em 0.5em 0; border-right: 0.083em solid #738490; }		
+#signature a.tipo		{ line-height: 2.667em; width: 11.667em; font-size: 2.25em; text-transform: uppercase; font-family: "Humanst521BTRoman"; display: block; float: left; margin: 0.667em 0 0 0.667em; color: #0073BF; }
+
+
+#menubar			{ width: 960px; height: 2.667em; margin: 0 auto; font-size: 1em; border-bottom: solid .25em #003659; border-top: solid 1px #E0E0E0; }
+#menubar ul			{ width: auto; margin: 0; display: inline; }
+#menubar ul li 		{ float: left; }
+
+#menu-nav  			{ float: left; font-family: Arial, Helvetica, sans-serif; padding: 0 0 0 0.5em; }
+#menu-nav a 		{ padding: 0 0.5em; display: block; color: #0073BF; text-decoration: none; }
+#menu-nav li 		{ line-height: 2.667em; }
+#menu-nav li:hover 	{ background-color: #E0E0E0; }
+#menu-nav ul 		{ margin: 0; }
+
+
 
 #container, #navbar {margin: 0 auto; overflow: hidden;}
 

@@ -44,9 +44,30 @@
 	</head>
 	<body <?php body_class(); ?>>
 	<div id="globalbar">
-		<div id="navbar">
-			barra de acesso rápido
-		</div>
+		<nav id="navbar">
+			
+			<ul id="top-nav">
+				<li>
+					<a href="http://tv.cancaonova.com/" title="TV Can&ccedil;&atilde;o Nova">TV</a>
+				</li>
+				<li>
+					<a href="http://radio.cancaonova.com/" title="R&aacute;dio AM Can&ccedil;&atilde;o Nova">R&aacute;dio AM</a>
+				</li>
+				<li>
+					<a href="http://blog.cancaonova.com/radiofm/" title="R&aacute;dio FM Can&ccedil;&atilde;o Nova">R&aacute;dio FM</a>
+				</li>
+				<li>
+					<a href="http://m.cancaonova.com/" title="Can&ccedil;&atilde;o Nova Mobile">Mobile</a>
+				</li>
+				<li>
+					<a href="http://chat.cancaonova.com/" title="Chat Can&ccedil;&atilde;o Nova">Chat</a>
+				</li>	
+				<li>
+					<a href="http://loja.cancaonova.com/" title="Loja Virtual Can&ccedil;&atilde;o Nova">Loja</a>
+				</li>
+			</ul>
+		
+		</nav>
 	</div>
 
 	<div id="container">
