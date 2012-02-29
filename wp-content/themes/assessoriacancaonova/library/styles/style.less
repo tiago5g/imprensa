@@ -65,12 +65,11 @@ font-size: 62.5%;
 ////////////
 
 #globalbar {
-	background-color: #E0E0E0;
+	border-bottom:1px solid #E0E0E0;
 	height: 3.6em;
 		#navbar	{ 
 			margin: 0 auto;
 			font-size: 1.2em;
-			background-color: #E0E0E0;
 			ul {
 				width: auto;
 				margin: 0;
@@ -130,27 +129,67 @@ font-size: 62.5%;
 }
 
 
-#menubar			{ width: 960px; height: 2.667em; margin: 0 auto; font-size: 1em; border-bottom: solid .25em #003659; border-top: solid 1px #E0E0E0; }
-#menubar ul			{ width: auto; margin: 0; display: inline; }
-#menubar ul li 		{ float: left; }
+#menubar {
+	height: 3em;
+	margin: 0 auto;
+	font-size: 1.2em;
+	border-bottom: solid 1px #001829;
+	background: #00548c; /* Old browsers */
+	background: -moz-linear-gradient(top,  #00548c 0%, #003659 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00548c), color-stop(100%,#003659)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #00548c 0%,#003659 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #00548c 0%,#003659 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #00548c 0%,#003659 100%); /* IE10+ */
+	background: linear-gradient(top,  #00548c 0%,#003659 100%); /* W3C */
+	box-shadow: 0 2px 3px 0 #2B3236;
 
-#menu-nav  			{ float: left; font-family: Arial, Helvetica, sans-serif; padding: 0 0 0 0.5em; }
-#menu-nav a 		{ padding: 0 0.5em; display: block; color: #0073BF; text-decoration: none; }
-#menu-nav li 		{ line-height: 2.667em; }
-#menu-nav li:hover 	{ background-color: #E0E0E0; }
-#menu-nav ul 		{ margin: 0; }
+	ul { 
+		width: auto;
+		margin: 0;
+		display: inline;
+		}
+	ul li {
+		float: left;
+		}
+	#menu-nav { 
+		font-family: Arial, Helvetica, sans-serif;
+		a { 
+			padding: 0 0.5em;
+			display: block;
+			color: #FFFFFF;
+			text-decoration: none;
+			}
+		a:hover { 
+			color: #0073BF;
+			}
+		li { 
+			line-height: 36px;
+			}
+		li:hover {
+			background-color: #E0E0E0;
+			}
+		ul {
+			margin: 0;
+			}
+		#skip {
+			display: none;
+		}
+	}
+}
 
+#container-content {
+	padding-top: 36px;
+}
 
-
-#container, #navbar {margin: 0 auto; overflow: hidden;}
-
-	header,
+#container-content, #navbar, #signature, #menu-nav {margin: 0 auto; overflow: hidden;}
+	
+	#menu-nav
 	nav#access,
 	footer	{
 		.column(12);
 	}
 			
-	section#content { 
+	#container-content { 
 		section#menu-rapido,
 		section#ultimas-pautas,
 		section#ultimos-artigos,
@@ -166,7 +205,7 @@ font-size: 62.5%;
 
 @media screen and (max-width: 600px) {
 
-	section#content { 
+	#container-content { 
 		section#menu-rapido,
 		section#ultimas-pautas,
 		section#ultimos-artigos,
@@ -182,25 +221,25 @@ font-size: 62.5%;
 }
 
 @media screen and (min-width: 320px) { 
-	#container, #navbar { width: 288px; } 
+	#container-content, #navbar, #signature, #menu-nav { width: 288px; } 
 }
 
 @media screen and (min-width: 480px) { 
-	#container, #navbar { width: 432px; }
+	#container-content, #navbar, #signature, #menu-nav { width: 432px; }
 }
 
 @media screen and (min-width: 600px) {
-	#container, #navbar { width: 576px; }
+	#container-content, #navbar, #signature, #menu-nav { width: 576px; }
 }
 
 @media screen and (min-width: 1024px) {
-	#container, #navbar { width: 864px; }
+	#container-content, #navbar, #signature, #menu-nav { width: 864px; }
 }
 
 @media screen and (min-width: 1280px) {
-	#container, #navbar { width: 1152px; }
+	#container-content, #navbar, #signature, #menu-nav { width: 1152px; }
 }
 
 @media screen and (min-width: 2560px) {
-	#container, #navbar { width: 1296px; }
+	#container-content, #navbar, #signature, #menu-nav { width: 1296px; }
 }

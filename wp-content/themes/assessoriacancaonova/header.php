@@ -43,44 +43,45 @@
 ?>
 	</head>
 	<body <?php body_class(); ?>>
-	<div id="globalbar">
-		<nav id="navbar">
+	<div id="container-header">
+		<div id="globalbar">
+			<nav id="navbar">
+				
+				<ul id="top-nav">
+					<li>
+						<a href="http://tv.cancaonova.com/" title="TV Can&ccedil;&atilde;o Nova">TV</a>
+					</li>
+					<li>
+						<a href="http://radio.cancaonova.com/" title="R&aacute;dio AM Can&ccedil;&atilde;o Nova">R&aacute;dio AM</a>
+					</li>
+					<li>
+						<a href="http://blog.cancaonova.com/radiofm/" title="R&aacute;dio FM Can&ccedil;&atilde;o Nova">R&aacute;dio FM</a>
+					</li>
+					<li>
+						<a href="http://m.cancaonova.com/" title="Can&ccedil;&atilde;o Nova Mobile">Mobile</a>
+					</li>
+					<li>
+						<a href="http://chat.cancaonova.com/" title="Chat Can&ccedil;&atilde;o Nova">Chat</a>
+					</li>	
+					<li>
+						<a href="http://loja.cancaonova.com/" title="Loja Virtual Can&ccedil;&atilde;o Nova">Loja</a>
+					</li>
+				</ul>
 			
-			<ul id="top-nav">
-				<li>
-					<a href="http://tv.cancaonova.com/" title="TV Can&ccedil;&atilde;o Nova">TV</a>
-				</li>
-				<li>
-					<a href="http://radio.cancaonova.com/" title="R&aacute;dio AM Can&ccedil;&atilde;o Nova">R&aacute;dio AM</a>
-				</li>
-				<li>
-					<a href="http://blog.cancaonova.com/radiofm/" title="R&aacute;dio FM Can&ccedil;&atilde;o Nova">R&aacute;dio FM</a>
-				</li>
-				<li>
-					<a href="http://m.cancaonova.com/" title="Can&ccedil;&atilde;o Nova Mobile">Mobile</a>
-				</li>
-				<li>
-					<a href="http://chat.cancaonova.com/" title="Chat Can&ccedil;&atilde;o Nova">Chat</a>
-				</li>	
-				<li>
-					<a href="http://loja.cancaonova.com/" title="Loja Virtual Can&ccedil;&atilde;o Nova">Loja</a>
-				</li>
-			</ul>
-		
-		</nav>
-	</div>
-
-	<div id="container">
-		<header role="banner">
+			</nav>
+		</div>
+		<header>
 			<div id="signature">
 				<a href="#" class="marca"><img src="<?php bloginfo( 'url' ) ?>/wp-content/themes/assessoriacancaonova/images/marca.png"></a>
 				<a href="#" class="tipo">Assessoria de Imprensa</a>
 			</div>
+			<div id="menubar">
+				<nav id="menu-nav">
+					<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
+					<a id="skip" href="#container-content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
+					<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
+					<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
+				</nav>
+			</div>
 		</header>
-		<nav id="access" role="navigation">
-		  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-			<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
-			<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
-			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #access -->
-
+	</div>

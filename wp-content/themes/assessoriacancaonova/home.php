@@ -14,7 +14,7 @@
  */
 
 get_header(); ?>
-		<section id="content" role="main">
+		<div id="container-content" role="main">
 		
 			<section id="menu-rapido">
 				<header>
@@ -120,6 +120,6 @@ get_header(); ?>
 				</header>
 			</section><!-- #proximos-eventos -->
 
-		</section><!-- #main -->
+		</div><!-- #main -->
 
 <?php get_footer(); ?>
