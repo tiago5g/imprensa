@@ -73,7 +73,7 @@
 	<div id="container">
 		<header role="banner">
 			<div id="signature">
-				<a href="#" class="marca"><img src="images/marca.png"></a>
+				<a href="#" class="marca"><img src="<?php bloginfo( 'url' ) ?>/wp-content/themes/assessoriacancaonova/images/marca.png"></a>
 				<a href="#" class="tipo">Assessoria de Imprensa</a>
 			</div>
 		</header>
