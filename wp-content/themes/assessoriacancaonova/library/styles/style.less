@@ -1,5 +1,9 @@
 @import 'less/grid.less';
 
+body {
+font-size: 62.5%;
+}
+
 ////////////////
 // TYPOGRAPHY //
 ////////////////
@@ -48,11 +52,10 @@
 
 #globalbar {
 	background-color: #E0E0E0;
-	height: 36px;
+	height: 3.6em;
 		#navbar	{ 
-			height: 36px;
 			margin: 0 auto;
-			font-size: 12px;
+			font-size: 1.2em;
 			background-color: #E0E0E0;
 			ul {
 				width: auto;
@@ -73,7 +76,7 @@
 					padding: 0 0.5em;
 					display: block;
 					line-height: 2.5em;
-					color: #0073BF;
+					color: #071926;
 					text-decoration: none;
 					}
 				a:hover {
@@ -86,17 +89,31 @@
 		} 
 }
 
-
-
-#top-nav  			{ float: left; font-family: "Humanst521BTRoman", Arial, Helvetica, sans-serif; text-transform: uppercase; padding: 0 0 0 0.5em; }
-#top-nav a 			{ margin: .25em 0 0; padding: 0 0.5em; display: block; line-height: 2.5em; color: #0073BF; text-decoration: none; }
-#top-nav a:hover 	{ border-bottom: 0.25em solid #0073BF; }
-#top-nav ul 		{ margin: 0; }
-
-#signature				{ height: 108px; }
-#signature a.marca		{ height: 6em; float: left; }
-#signature a.marca img 	{ margin: 1.5em 0 0 0.833em; padding: 0.5em 1.5em 0.5em 0; border-right: 0.083em solid #738490; }		
-#signature a.tipo		{ line-height: 2.667em; width: 11.667em; font-size: 2.25em; text-transform: uppercase; font-family: "Humanst521BTRoman"; display: block; float: left; margin: 0.667em 0 0 0.667em; color: #0073BF; }
+#signature { 
+	height: 10.8em;
+	a.marca	{
+		height: 7.2em;
+		float: left;
+		margin-top: 1.8em;
+		}
+	a.marca img {
+		margin: 0 0 0 1em;
+		padding: 0.6em 1.8em 0.6em 0;
+		border-right: 0.1em solid #738490;
+		}		
+	a.tipo {
+		line-height: 2.667em;
+		width: 11.667em;
+		font-size: 2.7em;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-family: "Humanst521BTRoman";
+		display: block;
+		float: left;
+		margin: 0.667em 0 0 0.667em;
+		color: #0073BF;
+		}
+}
 
 
 #menubar			{ width: 960px; height: 2.667em; margin: 0 auto; font-size: 1em; border-bottom: solid .25em #003659; border-top: solid 1px #E0E0E0; }
