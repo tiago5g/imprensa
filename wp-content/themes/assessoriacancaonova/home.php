@@ -14,25 +14,112 @@
  */
 
 get_header(); ?>
+		<section id="content" role="main">
 		
 			<section id="menu-rapido">
-				Acesso Rápido
-			</section>
+				<header>
+					<h3>Acesso Rápido</h3>
+				</header>
+			</section><!-- #menu-rapido -->
 
 			<section id="ultimas-pautas">
-				Pautas
-			</section>
+				<header>
+					<h3>Pautas</h3>
+				</header>
+
+				<article>
+					<h4>Titulo da Pauta</h4>
+					<div>
+						<time>01/01/2011</time>
+					</div>
+					<div>
+						<p>resumo</p>
+					</div>
+				</article>
+
+				<article>
+					<h4>Titulo da Pauta</h4>
+					<div>
+						<time>01/01/2011</time>
+					</div>
+					<div>
+						<p>resumo</p>
+					</div>
+				</article>
+
+				<article>
+					<h4>Titulo da Pauta</h4>
+					<div>
+						<time>01/01/2011</time>
+					</div>
+					<div>
+						<p>resumo</p>
+					</div>
+				</article>
+				
+				<footer>
+					<p>ver mais</p>
+				</footer>
+			</section><!-- #ultimas-pautas -->
 
 			<section id="ultimos-artigos">
-				Artigos
-			</section>
+				<header>
+					<h3>Artigos</h3>
+				</header>
+				
+				<article>
+					<h4>Titulo do Artigo</h4>
+					<div>
+						<time>01/01/2011</time>
+						<span>Categoria</span>
+					</div>
+					<div>
+						<p>resumo</p>
+					</div>
+				</article>
+
+				<article>
+					<h4>Titulo do Artigo</h4>
+					<div>
+						<time>01/01/2011</time>
+						<span>Categoria</span>
+					</div>
+					<div>
+						<p>resumo</p>
+					</div>
+				</article>
+
+				<article>
+					<h4>Titulo do Artigo</h4>
+					<div>
+						<time>01/01/2011</time>
+						<span>Categoria</span>
+					</div>
+					<div>
+						<p>resumo</p>
+					</div>
+				</article>
+
+				<footer>
+					<p>ver mais</p>
+				</footer>
+			</section><!-- #ultimos-artigos -->
 
 			<section id="destaque-fotos">
-				Fotos
-			</section>
-			<section id="proximos-eventos">
-				Eventos
-			</section>
+				<header>
+					<h3>Fotos</h3>
+				</header>
+				<footer>
+					<p>ver mais</p>
+				</footer>
+			</section><!-- #destaque-fotos -->
 
+			<section id="proximos-eventos">
+				<header>
+					<h3>Eventos</h3>
+				</header>
+			</section><!-- #proximos-eventos -->
+
+		</section><!-- #main -->
 
 <?php get_footer(); ?>
