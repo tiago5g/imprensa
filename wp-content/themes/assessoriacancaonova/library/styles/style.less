@@ -34,27 +34,30 @@
 // COLORS //
 ////////////
 
-@blue: #0099FF;
-@blue-10: (lighten(@blue,-7,5%));	/* #0084DB */
-@blue-20: (lighten(@blue,-15%));	/* #006BB3 */
-@blue-30: (lighten(@blue,-22,5%));	/* #00568F */
-@blue-40: (lighten(@blue,-30%));	/* #003D66 */
-@blue-50: (lighten(@blue,-37,5%));	/* #002842 */
-@blue-60: (lighten(@blue,-42,5%));	/* #001829 */
+/* Main Color */
+@color: #0099FF;
+@color-10: (lighten(@color,-7,5%));			/* #0084DB */
+@color-20: (lighten(@color,-15%));			/* #006BB3 */		/* cor institucional */
+@color-30: (lighten(@color,-22,5%));		/* #00568F */
+@color-40: (lighten(@color,-30%));			/* #003D66 */
+@color-50: (lighten(@color,-37,5%));		/* #002842 */
+@color-60: (lighten(@color,-42,5%));		/* #001829 */
 
-@silver: (rgb(248,250,250));		/* #F8FAFA */
-@silver-10: (rgb(235,239,239));		/* #EBEFEF */
-@silver-20: (rgb(230,234,234));		/* #E6EAEA */
-@silver-30: (rgb(220,224,224));		/* #DCE0E0 */
-@silver-40: (rgb(210,214,214));		/* #D2D6D6 */
-@silver-50: (rgb(200,204,204));		/* #C8CCCC */
-@silver-60: (rgb(190,194,194));		/* #BEC2C2 */
+/* Light Color */
+@lightcolor: (rgb(248,250,250));			/* #F8FAFA */
+@lightcolor-10: (rgb(235,239,239));			/* #EBEFEF */
+@lightcolor-20: (rgb(230,234,234));			/* #E6EAEA */
+@lightcolor-30: (rgb(220,224,224));			/* #DCE0E0 */
+@lightcolor-40: (rgb(210,214,214));			/* #D2D6D6 */
+@lightcolor-50: (rgb(200,204,204));			/* #C8CCCC */
+@lightcolor-60: (rgb(190,194,194));			/* #BEC2C2 */
 
-@gray: #738490;
-@gray-10: (lighten(@gray,-10%));	/* #5C6A74 */
-@gray-20: (lighten(@gray,-20%));	/* #455058 */
-@gray-30: (lighten(@gray,-30%));	/* #2F363B */
-@gray-40: (lighten(@gray,-40%));	/* #181C1F */
+/* Dark Color */
+@darkcolor: #738490;
+@darkcolor-10: (lighten(@darkcolor,-10%));	/* #5C6A74 */
+@darkcolor-20: (lighten(@darkcolor,-20%));	/* #455058 */
+@darkcolor-30: (lighten(@darkcolor,-30%));	/* #2F363B */
+@darkcolor-40: (lighten(@darkcolor,-40%));	/* #181C1F */
 
 
 ////////////
@@ -124,7 +127,7 @@ body {
 
 	border-width: @width;
 	border-style: solid;
-	border-color: @silver-60;
+	border-color: @lightcolor-60;
 }
 
 .border-blue(@width: 0 0 2px 0) {
@@ -132,14 +135,14 @@ body {
 
 	border-width: @width;
 	border-style: solid;
-	border-color: @blue-20;
+	border-color: @color-20;
 }
 
 a {
 	text-decoration: none;
-	color: @blue-40 !important;
+	color: @color-40 !important;
 	&:hover {
-		color: @blue-50 !important;
+		color: @color-50 !important;
 	}
 }
 
@@ -309,13 +312,13 @@ a {
 		.border-blue(0 0 0.111em 0); /* 2px */
 		font-weight: normal; 
 		line-height: 1.889em; /*34px*/ 
-		color: @blue-20; 
+		color: @color-20; 
 		margin-bottom: 0.5em;
 		}
 
 		h4 { 
 			font-weight: normal; 
-			color: @blue-30; }
+			color: @color-30; }
 
 		section#menu-rapido {
 			.column(3);
@@ -349,7 +352,7 @@ a {
 				display: block;
 				padding: 0 3.125%;
 				&:hover {
-					background-color: @silver-20;
+					background-color: @lightcolor-20;
 				}
 			}
 		}
