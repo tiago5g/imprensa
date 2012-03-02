@@ -60,6 +60,18 @@
 @darkcolor-40: (lighten(@darkcolor,-40%));	/* #181C1F */
 
 
+.softgradient {
+	background: #f8fafa; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f8fafa 0%, #ebefef 75%, #dce0e0 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8fafa), color-stop(75%,#ebefef), color-stop(100%,#dce0e0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f8fafa 0%,#ebefef 75%,#dce0e0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f8fafa 0%,#ebefef 75%,#dce0e0 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f8fafa 0%,#ebefef 75%,#dce0e0 100%); /* IE10+ */
+	background: linear-gradient(top,  #f8fafa 0%,#ebefef 75%,#dce0e0 100%); /* W3C */
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8fafa', endColorstr='#dce0e0',GradientType=0 ); /* IE6-9 */
+
+	}
+
 ////////////
 // GLOBAL //
 ////////////
@@ -127,7 +139,7 @@ body {
 
 	border-width: @width;
 	border-style: solid;
-	border-color: @lightcolor-60;
+	border-color: @lightcolor-30;
 }
 
 .border-blue(@width: 0 0 2px 0) {
@@ -138,13 +150,9 @@ body {
 	border-color: @color-20;
 }
 
-a {
-	text-decoration: none;
-	color: @color-40 !important;
-	&:hover {
-		color: @color-50 !important;
-	}
-}
+
+a, a:active, a:visited { color:  #000; text-decoration: none; }
+a:hover { color: #ccc; }
 
 
 //////////
@@ -311,7 +319,7 @@ a {
 	
 	#menu-nav
 	nav#access,
-	footer	{
+	#container-footer footer	{
 		.column(12);
 	}
 			
@@ -355,20 +363,33 @@ a {
 
 			article {
 				padding: .9em 3.125%;
+				&:hover {
+					.softgradient;
+					}
+
+				a {
+					color: @color-40 !important;
+					&:hover {
+						color: @color-50 !important;
+						}
+					}
+				}
 			}
 
-			footer a {
-				.tiny;
-				.border-gray(0.1em 0); /* 1px */
-				line-height: 1.6em;
-				display: block;
-				padding: 0 3.125%;
-				&:hover {
+			footer {
+				padding: .9em 0;
+				a {
+					.tiny;
+					display: block;
+					padding: 0 3.125%;
 					background-color: @lightcolor-20;
+					color: #666;
+					&:hover {
+						
+					}
 				}
 			}
 		}
-	}
 
 @media screen and (max-width: 600px) {
 

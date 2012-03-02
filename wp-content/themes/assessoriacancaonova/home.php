@@ -31,9 +31,9 @@ get_header(); ?>
 					<div>
 						<time>01/01/2011</time>
 					</div>
-					<h4>Titulo da Pauta</h4>
+					<h4><a href="#" title="">Titulo da Pauta</a></h4>
 					<div>
-						<p>resumo</p>
+						<p><a href="#" title="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta. </a></p>
 					</div>
 				</article>
 
@@ -41,22 +41,20 @@ get_header(); ?>
 					<div>
 						<time>01/01/2011</time>
 					</div>
-					<h4>Titulo da Pauta</h4>
+					<h4><a href="#" title="">Titulo da Pauta</a></h4>
 					<div>
-						<p>resumo</p>
+						<p><a href="#" title="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta. </a></p>
 					</div>
 				</article>
 
 				<article>
-					<a href="#" title="">
 						<div>
 							<time>01/01/2011</time>
 						</div>
-						<h4>Titulo da Pauta</h4>
+						<h4><a href="#" title="">Titulo da Pauta</a></h4>
 						<div>
-							<p>resumo</p>
+							<p><a href="#" title="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta. </a></p>
 						</div>
-					</a>
 				</article>
 				
 				<footer>
@@ -74,9 +72,9 @@ get_header(); ?>
 						<time>01/01/2011</time>
 						<span>Categoria</span>
 					</div>
-					<h4>Titulo do Artigo</h4>
+					<h4><a href="#" title="">Titulo do Artigo</a></h4>
 					<div>
-						<p>resumo</p>
+						<p><a href="#" title="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta. </a></p>
 					</div>
 				</article>
 
@@ -85,9 +83,9 @@ get_header(); ?>
 						<time>01/01/2011</time>
 						<span>Categoria</span>
 					</div>
-					<h4>Titulo do Artigo</h4>
+					<h4><a href="#teste" title="">Titulo do Artigo</a></h4>
 					<div>
-						<p>resumo</p>
+						<p><a href="#teste" title="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta. </a></p>
 					</div>
 				</article>
 
@@ -96,9 +94,9 @@ get_header(); ?>
 						<time>01/01/2011</time>
 						<span>Categoria</span>
 					</div>
-					<h4>Titulo do Artigo</h4>
+					<h4><a href="#" title="">Titulo do Artigo</a></h4>
 					<div>
-						<p>resumo</p>
+						<p><a href="#" title="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta. </a></p>
 					</div>
 				</article>
 				
