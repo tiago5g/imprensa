@@ -69,7 +69,6 @@
 	background: -ms-linear-gradient(top,  #f8fafa 0%,#ebefef 75%,#dce0e0 100%); /* IE10+ */
 	background: linear-gradient(top,  #f8fafa 0%,#ebefef 75%,#dce0e0 100%); /* W3C */
 	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8fafa', endColorstr='#dce0e0',GradientType=0 ); /* IE6-9 */
-
 	}
 
 ////////////
@@ -127,23 +126,23 @@ body {
   	line-height: 1.5em;
 }
 
-.type-humanist {
+.typehumanist {
 	/* tipografia institucional */
 
 	font-family: "Humanst521BTRoman", Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 }
 
-.border-gray(@width: 1px 0) {
-	/* use '.border-gray(top left right bottom)' para definir espessura da borda */
+.borderlight(@width: 1px 0) {
+	/* use '.borderlight(top left right bottom)' para definir espessura da borda */
 
 	border-width: @width;
 	border-style: solid;
-	border-color: @lightcolor-30;
+	border-color: @lightcolor-50;
 }
 
-.border-blue(@width: 0 0 2px 0) {
-	/* use '.border-blue(top left right bottom)' para definir espessura da borda */
+.borderblue(@width: 0 0 2px 0) {
+	/* use '.borderblue(top left right bottom)' para definir espessura da borda */
 
 	border-width: @width;
 	border-style: solid;
@@ -188,7 +187,7 @@ a:hover { color: #ccc; }
 				float: left;
 				}
 			#top-nav { 
-				.type-humanist;
+				.typehumanist;
 				float: left;
 				padding: 0 0 0 0.5em;
 				
@@ -224,7 +223,7 @@ a:hover { color: #ccc; }
 		border-right: 0.1em solid #738490;
 		}		
 	a.tipo {
-		.type-humanist;
+		.typehumanist;
 		line-height: 2.667em;
 		width: 11.667em;
 		font-size: 2.7em;
@@ -328,8 +327,8 @@ a:hover { color: #ccc; }
 		span, time { .tiny; }
 
 		h3 { 
-		.type-humanist;
-		.border-blue(0 0 0.111em 0); /* 2px */
+		.typehumanist;
+		.borderblue(0 0 0.111em 0); /* 2px */
 		font-weight: normal; 
 		line-height: 1.889em; /*34px*/ 
 		color: @color-20; 
@@ -368,28 +367,29 @@ a:hover { color: #ccc; }
 					}
 
 				a {
-					color: @color-40 !important;
-					&:hover {
-						color: @color-50 !important;
-						}
-					}
+					p {	color: @color-40 !important; }
+					&:hover p { color: @color-50 !important; }
+					&:hover h4 { color: @color-40; }
 				}
 			}
 
 			footer {
-				padding: .9em 0;
+				padding: .9em 0 0;
 				a {
 					.tiny;
+					line-height: 1.7em;
+					.borderlight(0 0 1px);
 					display: block;
 					padding: 0 3.125%;
-					background-color: @lightcolor-20;
+					.softgradient;
 					color: #666;
 					&:hover {
-						
+						background: @lightcolor-10;
 					}
 				}
 			}
 		}
+	}
 
 @media screen and (max-width: 600px) {
 
