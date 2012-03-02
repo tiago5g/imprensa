@@ -28,37 +28,39 @@ get_header(); ?>
 				</header>
 
 				<article>
-					<h4>Titulo da Pauta</h4>
 					<div>
 						<time>01/01/2011</time>
 					</div>
+					<h4>Titulo da Pauta</h4>
 					<div>
 						<p>resumo</p>
 					</div>
 				</article>
 
 				<article>
-					<h4>Titulo da Pauta</h4>
 					<div>
 						<time>01/01/2011</time>
 					</div>
+					<h4>Titulo da Pauta</h4>
 					<div>
 						<p>resumo</p>
 					</div>
 				</article>
 
 				<article>
-					<h4>Titulo da Pauta</h4>
-					<div>
-						<time>01/01/2011</time>
-					</div>
-					<div>
-						<p>resumo</p>
-					</div>
+					<a href="#" title="">
+						<div>
+							<time>01/01/2011</time>
+						</div>
+						<h4>Titulo da Pauta</h4>
+						<div>
+							<p>resumo</p>
+						</div>
+					</a>
 				</article>
 				
 				<footer>
-					<p>ver mais</p>
+					<span><a href="#" title="">veja mais</a></span>
 				</footer>
 			</section><!-- #ultimas-pautas -->
 
@@ -68,40 +70,40 @@ get_header(); ?>
 				</header>
 				
 				<article>
-					<h4>Titulo do Artigo</h4>
 					<div>
 						<time>01/01/2011</time>
 						<span>Categoria</span>
 					</div>
+					<h4>Titulo do Artigo</h4>
 					<div>
 						<p>resumo</p>
 					</div>
 				</article>
 
 				<article>
-					<h4>Titulo do Artigo</h4>
 					<div>
 						<time>01/01/2011</time>
 						<span>Categoria</span>
 					</div>
+					<h4>Titulo do Artigo</h4>
 					<div>
 						<p>resumo</p>
 					</div>
 				</article>
 
 				<article>
-					<h4>Titulo do Artigo</h4>
 					<div>
 						<time>01/01/2011</time>
 						<span>Categoria</span>
 					</div>
+					<h4>Titulo do Artigo</h4>
 					<div>
 						<p>resumo</p>
 					</div>
 				</article>
-
+				
 				<footer>
-					<p>ver mais</p>
+					<span><a href="#" title="">veja mais</a></span>
 				</footer>
 			</section><!-- #ultimos-artigos -->
 
@@ -110,7 +112,7 @@ get_header(); ?>
 					<h3>Fotos</h3>
 				</header>
 				<footer>
-					<p>ver mais</p>
+					<span><a href="#" title="">veja mais</a></span>
 				</footer>
 			</section><!-- #destaque-fotos -->
 
