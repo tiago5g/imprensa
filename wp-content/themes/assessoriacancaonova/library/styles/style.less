@@ -281,16 +281,28 @@ a {
 			}
 		li:hover {
 			border-top: 1px solid #B2B2B2;
-			border-left: 1px solid #003659;
-			border-right: 1px solid #003659;
 			box-shadow: 0px 5px 5px #B1B2B2 inset;
 			background-color: #E0E0E0;
 			}
 		ul {
 			margin: 0;
+			position: relative;
 			}
 		#skip {
 			display: none;
+		}
+		#menu-header{
+			a {
+				color:;
+			}
+			ul {
+				visibility: hidden;
+				position: absolute;
+			}
+			li {
+				float:left;
+			}
+
 		}
 	}
 }
