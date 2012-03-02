@@ -1,9 +1,5 @@
 @import 'less/grid.less';
 
-body {
-font-size: 62.5%;
-}
-
 ////////////////
 // TYPOGRAPHY //
 ////////////////
@@ -30,11 +26,6 @@ font-size: 62.5%;
     font-weight: normal;
     font-style: normal;
 
-}
-
-#container-content {
-	h3 { font-size: 1.8em; /*18px*/ line-height: 2em; /*36px*/ color: @blue-20; }
-	h4 { font-size: 1.4em; /*14px*/ line-height: 2em; /*18px*/ color: @blue-30; }
 }
 
 
@@ -65,6 +56,95 @@ font-size: 62.5%;
 @gray-40: (lighten(@gray,-40%));	/* #181C1F */
 
 
+////////////
+// GLOBAL //
+////////////
+
+body {
+	/* 10px / 18px */
+
+	font-size: 62.5%;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.8em;
+}
+
+.tiny {
+	/* 10px / 18px */
+
+	font-size: 1em;
+  	line-height: 1.8em;
+  	text-transform: uppercase;
+}
+
+.small, p {
+  	/* 14px / 18px */
+
+  	font-size: 1.4em;
+  	line-height: 1.286em;
+}
+
+.normal, h4 {
+  	/* 16px / 18px */
+
+  	font-size: 1.6em;
+  	line-height: 1.125em;
+}
+
+.large, h3 {
+  	/* 18 / 36px */
+
+  	font-size: 1.8em;
+  	line-height: 2em;
+}
+
+.huge, h2 {
+  	/* 27 / 36px */
+
+  	font-size: 2.7em;
+  	line-height: 1.333em;
+}
+
+.gigantic, h1 {
+	/* 36 / 54px */
+
+	font-size: 3.6em;
+  	line-height: 1.5em;
+}
+
+.type-humanist {
+	/* tipografia institucional */
+
+	font-family: "Humanst521BTRoman", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
+.border-silver(@width: 1px 0) {
+	/* use '.border-silver(top left right bottom)' para definir espessura da borda */
+
+	border-width: @width;
+	border-style: solid;
+	border-color: @silver-60;
+}
+
+.border-blue(@width: 0 0 2px 0) {
+	/* use '.border-blue(top left right bottom)' para definir espessura da borda */
+
+	border-width: @width;
+	border-style: solid;
+	border-color: @blue-20;
+}
+
+a {
+	text-decoration: none;
+	color: @blue-40 !important;
+	&:hover {
+		color: @blue-50 !important;
+	}
+}
+
+
+
+
 
 //////////
 // GRID //
@@ -79,12 +159,13 @@ font-size: 62.5%;
 @total-width: 100%;
 
 
+
 ////////////
 // LAYOUT //
 ////////////
 
 #globalbar {
-	border-bottom:1px solid #E0E0E0;
+	border-bottom: 1px solid #E0E0E0;
 	height: 3.6em;
 		#navbar	{ 
 			margin: 0 auto;
@@ -98,9 +179,8 @@ font-size: 62.5%;
 				float: left;
 				}
 			#top-nav { 
+				.type-humanist;
 				float: left;
-				font-family: "Humanst521BTRoman", Arial, Helvetica, sans-serif;
-				text-transform: uppercase;
 				padding: 0 0 0 0.5em;
 				
 				a { 
@@ -110,10 +190,11 @@ font-size: 62.5%;
 					line-height: 2.5em;
 					color: #071926;
 					text-decoration: none;
+					&:hover {
+						border-bottom: 0.25em solid #0073BF;
+						}
 					}
-				a:hover {
-					border-bottom: 0.25em solid #0073BF;
-					}
+
 				ul { 
 					margin: 0;
 					}
@@ -134,12 +215,11 @@ font-size: 62.5%;
 		border-right: 0.1em solid #738490;
 		}		
 	a.tipo {
+		.type-humanist;
 		line-height: 2.667em;
 		width: 11.667em;
 		font-size: 2.7em;
-		text-transform: uppercase;
 		text-decoration: none;
-		font-family: "Humanst521BTRoman";
 		display: block;
 		float: left;
 		margin: 0.667em 0 0 0.667em;
@@ -177,18 +257,18 @@ font-size: 62.5%;
 			display: block;
 			color: #FFFFFF;
 			text-decoration: none;
-			}
-		a:hover { 
-			color: #0073BF;
+			&:hover { 
+				color: #0073BF;
+				}
 			}
 		li { 
 			line-height: 36px;
-			}
-		li:hover {
-			border-left: 1px solid #003659;
-			border-right: 1px solid #003659;
-			box-shadow: 0px 5px 5px #B1B2B2 inset;
-			background-color: #E0E0E0;
+			&:hover {
+				border-left: 1px solid #003659;
+				border-right: 1px solid #003659;
+				box-shadow: 0px 5px 5px #B1B2B2 inset;
+				background-color: #E0E0E0;
+				}
 			}
 		ul {
 			margin: 0;
@@ -199,11 +279,7 @@ font-size: 62.5%;
 	}
 }
 
-#container-content {
-	padding-top: 36px;
-}
-
-#container-content, #navbar, #signature, #menu-nav {margin: 0 auto; overflow: hidden;}
+#container-content, #navbar, #signature, #menu-nav { margin: 0 auto; overflow: hidden; }
 	
 	#menu-nav
 	nav#access,
@@ -211,17 +287,58 @@ font-size: 62.5%;
 		.column(12);
 	}
 			
-	#container-content { 
-		section#menu-rapido,
+	#container-content {
+
+		span, time { .tiny; }
+
+		h3 { 
+		.type-humanist;
+		.border-blue(0 0 0.111em 0); /* 2px */
+		font-weight: normal; 
+		line-height: 1.889em; /*34px*/ 
+		color: @blue-20; 
+		margin-bottom: 0.5em;
+		}
+
+		h4 { 
+			font-weight: normal; 
+			color: @blue-30; }
+
+		section#menu-rapido {
+			.column(3);
+			.pull(1);
+			margin-top: 1.8em;
+		}
 		section#ultimas-pautas,
 		section#ultimos-artigos,
 		section#destaque-fotos,
 		section#proximos-eventos {
-			.column(4); background: #cccccc;
+			.column(4);
+			margin-top: 1.8em;
 		}
 
 		section#destaque-fotos {				
 			.push(4);
+		}
+
+		section#ultimas-pautas,
+		section#ultimos-artigos,
+		section#destaque-fotos {
+
+			article {
+				padding: .9em 3.125%;
+			}
+
+			footer a {
+				.tiny;
+				.border-silver(0.1em 0); /* 1px */
+				line-height: 1.6em;
+				display: block;
+				padding: 0 3.125%;
+				&:hover {
+					background-color: @silver-20;
+				}
+			}
 		}
 	}
 
