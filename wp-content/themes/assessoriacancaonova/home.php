@@ -15,7 +15,9 @@
 
 get_header(); ?>
 		<div id="container-content" role="main">
-		
+                        <section id="nota-oficial">
+                                <?php get_template_part( 'loop', 'notas' );?>
+                        </section>
 			<section id="menu-rapido">
 				<header>
 					<h3>Acesso Rápido</h3>
