@@ -1,4 +1,9 @@
 wp-config.php
 .htaccess
-
+*~
+tmp/**/*
+Thumbs.db
+*.properties
+nbproject/
+*.sql
 .DS_Store
