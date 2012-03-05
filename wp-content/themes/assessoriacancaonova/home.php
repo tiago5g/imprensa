@@ -14,8 +14,7 @@
  */
 
 get_header(); ?>
-		<div id="container-content" role="main">
-		
+	
 			<section id="menu-rapido">
 				<header>
 					<h3>Acesso Rápido</h3>
@@ -92,7 +91,7 @@ get_header(); ?>
 						<span>Categoria</span>
 					</div>
 					<a href="#" title="Titulo do Artigo">
-						<h4>Titulo do Artigo</h4>
+						<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
 						<div>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
 						</div>
@@ -131,7 +130,5 @@ get_header(); ?>
 					<h3>Eventos</h3>
 				</header>
 			</section><!-- #proximos-eventos -->
-
-		</div><!-- #main -->
 
 <?php get_footer(); ?>
