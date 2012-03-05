@@ -119,11 +119,19 @@ body {
   	line-height: 1.333em;
 }
 
-.gigantic, h1 {
+.massive, h1 {
 	/* 24 / 36px */
 
 	font-size: 2.4em;
   	line-height: 1.5em;
+}
+
+.gigantic {
+	/* 36 / 54px */
+
+	font-size: 3.6em;
+  	line-height: 1.5em;
+
 }
 
 .typehumanist {
@@ -238,6 +246,7 @@ a:hover { color: #ccc; }
 		float: left;
 		margin: 0.667em 0 0 0.667em;
 		color: #0073BF;
+		text-shadow: 0 1px 0 @lightcolor-50;
 		}
 }
 
@@ -334,22 +343,22 @@ a:hover { color: #ccc; }
 			.typehumanist;
 			font-weight: normal; 
 			color: @color-20; 
-		 }
+		}
 
 		span, time { .tiny; }
 
 		h3 { 
-		.typehumanist;
-		.borderblue(0 0 0.111em 0); /* 2px */
-		font-weight: normal; 
-		line-height: 1.889em; /*34px*/ 
-		color: @color-20; 
-		margin-bottom: 0.5em;
+			.typehumanist;
+			.borderblue(0 0 0.111em 0); /* 2px */
+			font-weight: normal; 
+			line-height: 1.889em; /*34px*/ 
+			color: @color-20; 
+			margin-bottom: 0.5em;
+			box-shadow: 0 1px 0 @lightcolor-50;
+			text-shadow: 0 1px 0 @lightcolor-50;
 		}
 
-		h4 { 
-			font-weight: normal; 
-			color: @color-30; }
+		h4 { color: @color-30; }
 
 		section#menu-rapido {
 			.column(3);
@@ -370,11 +379,13 @@ a:hover { color: #ccc; }
 
 		#content {
 			.column(6,12);
+			margin-top: 1.8em;
 		}
 
 		.xoxo {
 			.column(4,12);
 			.push(1);
+			margin-top: 1.8em;
 		}
 
 		section#ultimas-pautas,
@@ -388,8 +399,8 @@ a:hover { color: #ccc; }
 					}
 
 				a {
-					p {	color: @color-40 !important; }
-					&:hover p { color: @color-50 !important; }
+					p {	color: @darkcolor-30 !important; }
+					&:hover p { color: @darkcolor-40 !important; }
 					&:hover h4 { color: @color-40; }
 				}
 			}
@@ -403,9 +414,12 @@ a:hover { color: #ccc; }
 					display: block;
 					padding: 0 3.125%;
 					.softgradient;
-					color: #666;
+					color: @color-20;
 					&:hover {
+						line-height: 1.6em;
+						.borderlight(1px 0);
 						background: @lightcolor-10;
+						color: @color-30;
 					}
 				}
 			}
