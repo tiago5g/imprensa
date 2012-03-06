@@ -1,6 +1,19 @@
 @import 'less/grid.less';
 
 
+//////////
+// GRID //
+//////////
+
+// Specify the number of columns and set column and gutter widths
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+
+// Remove the definition below for a pixel-based layout
+@total-width: 100%;
+
+
 ////////////////
 // TYPOGRAPHY //
 ////////////////
@@ -70,6 +83,12 @@
 	background: linear-gradient(top,  #ffffff 0%,@lightcolor-10 75%,@lightcolor-30 100%); /* W3C */
 	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8fafa', endColorstr='@lightcolor-30',GradientType=0 ); /* IE6-9 */
 	}
+
+.softshadow {
+	-webkit-box-shadow: 0 2px 4px 0 @lightcolor-50;
+	-moz-box-shadow:    0 2px 4px 0 @lightcolor-50;
+	box-shadow: 		0 2px 4px 0 @lightcolor-50;
+}
 
 ////////////
 // GLOBAL //
@@ -161,23 +180,60 @@ a, a:active, a:visited { color:  #000; text-decoration: none; }
 a:hover { color: #ccc; }
 
 
-//////////
-// GRID //
-//////////
-
-// Specify the number of columns and set column and gutter widths
-@columns: 12;
-@column-width: 60;
-@gutter-width: 20;
-
-// Remove the definition below for a pixel-based layout
-@total-width: 100%;
-
-
 
 ////////////
 // LAYOUT //
 ////////////
+
+#menu-nav
+nav#access,
+#container-footer footer {
+	.column(12);
+}
+
+#container-content, #container-footer, #navbar, #signature, #menu-nav { margin: 0 auto; overflow: hidden; }
+
+#container-content {
+	.post .entry-meta 	{ margin-bottom: 1.8em; }	/* 18px */
+	.entry-content p 	{ margin-bottom: 1.286em; }	/* 18px */
+
+	#content {
+		.column(6,12);
+		margin-top: 1.8em;
+	}
+
+	.xoxo {
+		.column(4,12);
+		.push(1);
+		margin-top: 1.8em;
+	}
+
+	span, time { .tiny; }
+
+	h3, h1 { 
+		.large;
+		.typehumanist;
+		.borderblue(0 0 0.111em 0); /* 2px */
+		font-weight: normal; 
+		line-height: 1.889em; /*34px*/ 
+		color: @color-20; 
+		margin-bottom: 0.5em;
+		box-shadow: 0 1px 0 @lightcolor-40;
+		text-shadow: 0 1px 0 @lightcolor-40;
+	}
+
+	h4, h2 a { 
+		.normal;
+		color: @color-30 !important;
+	}
+
+	h2 a:hover { color: @color-40; }
+
+	p {	color: @darkcolor-30 }
+}
+
+
+//////////// HEADER ////////////
 
 #container-header {
 	header {
@@ -246,10 +302,9 @@ a:hover { color: #ccc; }
 		float: left;
 		margin: 0.667em 0 0 0.667em;
 		color: #0073BF;
-		text-shadow: 0 1px 0 @lightcolor-50;
+		text-shadow: 0 1px 0 @lightcolor-40;
 		}
 }
-
 
 #menubar {
 	height: 3em;
@@ -263,7 +318,7 @@ a:hover { color: #ccc; }
 	background: -o-linear-gradient(top,  #00548c 0%,#003659 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  #00548c 0%,#003659 100%); /* IE10+ */
 	background: linear-gradient(top,  #00548c 0%,#003659 100%); /* W3C */
-	box-shadow: @lightcolor-60 0 2px 3px 0;
+	.softshadow;
 
 	ul { 
 		width: auto;
@@ -329,38 +384,11 @@ a:hover { color: #ccc; }
 	}
 }
 
-#container-content, #container-footer, #navbar, #signature, #menu-nav { margin: 0 auto; overflow: hidden; }
+
+//////////// HOME ////////////
 	
-	#menu-nav
-	nav#access,
-	#container-footer footer {
-		.column(12);
-	}
-			
+.home {			
 	#container-content {
-
-		span, time { .tiny; }
-
-		h3, h1 { 
-			.large;
-			.typehumanist;
-			.borderblue(0 0 0.111em 0); /* 2px */
-			font-weight: normal; 
-			line-height: 1.889em; /*34px*/ 
-			color: @color-20; 
-			margin-bottom: 0.5em;
-			box-shadow: 0 1px 0 @lightcolor-50;
-			text-shadow: 0 1px 0 @lightcolor-50;
-		}
-
-		h4, h2 a { 
-			.normal;
-			color: @color-30 !important;
-			}
-
-			h2 a:hover { color: @color-40; }
-
-		p {	color: @darkcolor-30 }
 
 		section#menu-rapido {
 			.column(3);
@@ -415,18 +443,51 @@ a:hover { color: #ccc; }
 				}
 			}
 		}
+	}
+}
 
+
+//////////// CATEGORIA ////////////
+
+.category {
+	#container-content {
 		#content {
-			.column(6,12);
-			margin-top: 1.8em;
-		}
 
-		.xoxo {
-			.column(4,12);
-			.push(1);
-			margin-top: 1.8em;
+			article {
+				padding: .9em 2.083%;
+				&:hover {
+					.softgradient;
+					}
+
+				a {
+					p {	color: @darkcolor-30 !important; }
+					&:hover p { color: @darkcolor-40 !important; }
+					&:hover h4 { color: @color-40; }
+				}
+			}
 		}
 	}
+}
+
+
+//////////// POST ////////////
+
+.single {
+	#container-content {
+		#content {
+
+			.entry-content {
+				padding: .9em 2.083%;
+				background-color: @lightcolor-10;
+				.softshadow;
+			}
+		}
+	}
+}
+
+
+
+//////////// MEDIA-QUERY ////////////
 
 @media screen and (max-width: 600px) {
 
