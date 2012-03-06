@@ -14,36 +14,38 @@
  */
 
 get_header(); ?>
-		<div id="container-content" role="main">
-                        <section id="nota-oficial">
-                                <?php get_template_part( 'loop', 'notas' );?>
-                        </section>
-			<section id="menu-rapido">
-				<header>
-					<h3>Acesso Rápido</h3>
-				</header>
-			</section><!-- #menu-rapido -->
 
-			<section id="ultimas-pautas">
-                                <?php get_template_part( 'loop', 'pautas' );?>
-			</section><!-- #ultimas-pautas -->
-			<section id="ultimos-artigos">				
-				<?php get_template_part( 'loop', 'artigos' );?>
-			</section><!-- #ultimos-artigos -->
+	<div id="container-content" role="main">
+    				<section id="nota-oficial">
+                    	<?php get_template_part( 'loop', 'notas' );?>
+					</section>
+		<section id="menu-rapido">
+			<header>
+				<h3>Acesso Rápido</h3>
+			</header>
+		</section><!-- #menu-rapido -->
 
-			<section id="destaque-fotos">
-				<header>
-					<h3>Fotos</h3>
-				</header>
-				<footer>
-					<span><a href="#" title="">veja mais</a></span>
-				</footer>
-			</section><!-- #destaque-fotos -->
+		<section id="ultimas-pautas">
+        	<?php get_template_part( 'loop', 'pautas' );?>
+		</section><!-- #ultimas-pautas -->
+		<section id="ultimos-artigos">				
+			<?php get_template_part( 'loop', 'artigos' );?>
+		</section><!-- #ultimos-artigos -->
 
-			<section id="proximos-eventos">
-				<header>
-					<h3>Eventos</h3>
-				</header>
-			</section><!-- #proximos-eventos -->
+		<section id="destaque-fotos">
+			<header>
+				<h3>Fotos</h3>
+			</header>
+			<footer>
+				<span><a href="#" title="">veja mais</a></span>
+			</footer>
+		</section><!-- #destaque-fotos -->
+
+		<section id="proximos-eventos">
+			<header>
+				<h3>Eventos</h3>
+			</header>
+		</section><!-- #proximos-eventos -->
+	</div><!-- #main -->
 
 <?php get_footer(); ?>

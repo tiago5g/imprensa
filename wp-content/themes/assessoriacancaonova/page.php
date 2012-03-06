@@ -14,9 +14,9 @@
 
 get_header(); ?>
 
-<div id="content">
-
-	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+	<div id="container-content" role="main">
+		<div id="content">
+			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<?php if ( is_front_page() ) { ?>
 					<h2 class="entry-title"><?php the_title(); ?></h2>
@@ -29,9 +29,10 @@ get_header(); ?>
 						<?php edit_post_link( __( 'Edit', 'boilerplate' ), '', '' ); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-## -->
-	<?php endwhile; ?>
-
-</div> <!-- #content -->
+			<?php endwhile; ?>
+		</div> <!-- #content -->
 
 <!--?php get_sidebar(); ?-->
+	</div><!-- #main -->
+	
 <?php get_footer(); ?>

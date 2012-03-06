@@ -9,10 +9,7 @@
  * @subpackage Boilerplate
  * @since Boilerplate 1.0
  */
-?>
-		
-		</div><!-- #main -->
-
+?>	
 		<div id="container-footer">
 			<div id="content-footer">
 				<footer role="contentinfo">

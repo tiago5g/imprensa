@@ -85,5 +85,3 @@
 			</div>
 		</header>
 	</div>
-
-	<div id="container-content" role="main">
