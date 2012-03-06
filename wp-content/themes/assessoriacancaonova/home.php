@@ -14,10 +14,14 @@
  */
 
 get_header(); ?>
+<<<<<<< HEAD
 		<div id="container-content" role="main">
                         <section id="nota-oficial">
                                 <?php get_template_part( 'loop', 'notas' );?>
                         </section>
+=======
+	
+>>>>>>> 6fbb202c397fb632bc6bafb21670e4470b87f4ec
 			<section id="menu-rapido">
 				<header>
 					<h3>Acesso Rápido</h3>
@@ -28,8 +32,58 @@ get_header(); ?>
                                 <?php get_template_part( 'loop', 'pautas' );?>
 			</section><!-- #ultimas-pautas -->
 
+<<<<<<< HEAD
 			<section id="ultimos-artigos">				
 				<?php get_template_part( 'loop', 'artigos' );?>
+=======
+			<section id="ultimos-artigos">
+				<header>
+					<h3>Artigos</h3>
+				</header>
+				
+				<article>
+					<div>
+						<time>01/01/2011</time>
+						<span>Categoria</span>
+					</div>
+					<a href="#" title="Titulo do Artigo">
+						<h4>Titulo do Artigo</h4>
+						<div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
+						</div>
+					</a>
+				</article>
+
+				<article>
+					<div>
+						<time>01/01/2011</time>
+						<span>Categoria</span>
+					</div>
+					<a href="#" title="Titulo do Artigo">
+						<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+						<div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
+						</div>
+					</a>
+				</article>
+
+				<article>
+					<div>
+						<time>01/01/2011</time>
+						<span>Categoria</span>
+					</div>
+					<a href="#" title="Titulo do Artigo">
+						<h4>Titulo do Artigo</h4>
+						<div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
+						</div>
+					</a>
+				</article>
+				
+				<footer>
+					<span><a href="#" title="">veja mais</a></span>
+				</footer>
+>>>>>>> 6fbb202c397fb632bc6bafb21670e4470b87f4ec
 			</section><!-- #ultimos-artigos -->
 
 			<section id="destaque-fotos">
@@ -46,7 +100,5 @@ get_header(); ?>
 					<h3>Eventos</h3>
 				</header>
 			</section><!-- #proximos-eventos -->
-
-		</div><!-- #main -->
 
 <?php get_footer(); ?>
