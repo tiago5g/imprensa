@@ -251,73 +251,56 @@ a:hover { color: #ccc; }
 	background: linear-gradient(top,  #00548c 0%,#003659 100%); /* W3C */
 	box-shadow: 0 3px 3px 1px #5B6972;
 
-	ul { 
-		width: auto;
-		margin: 0;
-		display: inline;
-		}
-	ul li {
-		float: left;
-		}
-	#menu-nav { 
+
+	#menu { 
 		font-family: Arial, Helvetica, sans-serif;
+
 		a { 
 			padding: 0 5px;
 			display: block;
-			color: #FFFFFF !important;
+			color: #FFFFFF;
 			text-decoration: none;
-			&:hover { 
-				color: #0073BF;
-				}
 			}
-		li { 
-			line-height: 36px;
-			&:hover {
-				border-left: 1px solid #003659;
-				border-right: 1px solid #003659;
-				box-shadow: 0px 5px 5px #B1B2B2 inset;
-				background-color: #E0E0E0;
-				}
-			}
-		a:hover { 
-			color: #0073BF;
-			padding: 0 4px;
 
-			}
 		li { 
 			line-height: 36px;
 			&:hover {
 					border-top: 1px solid #B2B2B2;
 					box-shadow: 0px 5px 5px #B1B2B2 inset;
 					background-color: #E0E0E0;
-					}
-			}
-		ul {
-			margin: 0;
-			position: relative;
-			}
-		#skip {
-			display: none;
-		}
-		#menu-header{
-			a {
-				color: @color-20;
-			}
-			ul {
-				visibility: hidden;
-				position: absolute;
-			}
-			li {
-				float:left;
+					a {
+						color: @color-40;
+						}
+				}
 			}
 
+		#menu-nav {
+			width: auto;
+			margin: 0;
+			position: relative;
+			li {
+				float: left;
+				ul li {
+					float: none;
+					display: none;
+					&:hover{
+						ul.submenu{
+							display: block;
+							}
+						}
+					}
+				}
+			}
+
+		#skip {
+			display: none;
 		}
 	}
 }
 
-#container-content, #navbar, #signature, #menu-nav { margin: 0 auto; overflow: hidden; }
+#container-content, #navbar, #signature, #menu { margin: 0 auto; overflow: hidden; }
 	
-	#menu-nav
+	.menu
 	nav#access,
 	#container-footer footer	{
 		.column(12);
@@ -409,25 +392,25 @@ a:hover { color: #ccc; }
 }
 
 @media screen and (min-width: 320px) { 
-	#container-content, #navbar, #signature, #menu-nav { width: 288px; } 
+	#container-content, #navbar, #signature, #menu { width: 288px; } 
 }
 
 @media screen and (min-width: 480px) { 
-	#container-content, #navbar, #signature, #menu-nav { width: 432px; }
+	#container-content, #navbar, #signature, #menu { width: 432px; }
 }
 
 @media screen and (min-width: 600px) {
-	#container-content, #navbar, #signature, #menu-nav { width: 576px; }
+	#container-content, #navbar, #signature, #menu { width: 576px; }
 }
 
 @media screen and (min-width: 1024px) {
-	#container-content, #navbar, #signature, #menu-nav { width: 864px; }
+	#container-content, #navbar, #signature, #menu { width: 864px; }
 }
 
 @media screen and (min-width: 1280px) {
-	#container-content, #navbar, #signature, #menu-nav { width: 1152px; }
+	#container-content, #navbar, #signature, #menu { width: 1152px; }
 }
 
 @media screen and (min-width: 2560px) {
-	#container-content, #navbar, #signature, #menu-nav { width: 1296px; }
+	#container-content, #navbar, #signature, #menu { width: 1296px; }
 }
