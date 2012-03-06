@@ -14,7 +14,10 @@
  */
 
 get_header(); ?>
-	
+		<div id="container-content" role="main">
+                        <section id="nota-oficial">
+                                <?php get_template_part( 'loop', 'notas' );?>
+                        </section>
 			<section id="menu-rapido">
 				<header>
 					<h3>Acesso Rápido</h3>
@@ -22,98 +25,10 @@ get_header(); ?>
 			</section><!-- #menu-rapido -->
 
 			<section id="ultimas-pautas">
-				<header>
-					<h3>Pautas</h3>
-				</header>
-
-				<article>
-					<div>
-						<time>01/01/2011</time>
-					</div>
-					<a href="#" title="Titulo da Pauta">
-						<h4>Titulo da Pauta</h4>
-						<div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
-						</div>
-					</a>
-				</article>
-
-				<article>
-					<div>
-						<time>01/01/2011</time>
-					</div>
-					<a href="#" title="Titulo da Pauta">
-						<h4>Titulo da Pauta</h4>
-						<div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
-						</div>
-					</a>
-				</article>
-
-				<article>
-						<div>
-							<time>01/01/2011</time>
-						</div>
-						<a href="#" title="Titulo da Pauta">
-							<h4>Titulo da Pauta</h4>
-							<div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
-							</div>
-						</a>
-				</article>
-				
-				<footer>
-					<span><a href="#" title="">veja mais</a></span>
-				</footer>
+                                <?php get_template_part( 'loop', 'pautas' );?>
 			</section><!-- #ultimas-pautas -->
-
-			<section id="ultimos-artigos">
-				<header>
-					<h3>Artigos</h3>
-				</header>
-				
-				<article>
-					<div>
-						<time>01/01/2011</time>
-						<span>Categoria</span>
-					</div>
-					<a href="#" title="Titulo do Artigo">
-						<h4>Titulo do Artigo</h4>
-						<div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
-						</div>
-					</a>
-				</article>
-
-				<article>
-					<div>
-						<time>01/01/2011</time>
-						<span>Categoria</span>
-					</div>
-					<a href="#" title="Titulo do Artigo">
-						<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-						<div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
-						</div>
-					</a>
-				</article>
-
-				<article>
-					<div>
-						<time>01/01/2011</time>
-						<span>Categoria</span>
-					</div>
-					<a href="#" title="Titulo do Artigo">
-						<h4>Titulo do Artigo</h4>
-						<div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
-						</div>
-					</a>
-				</article>
-				
-				<footer>
-					<span><a href="#" title="">veja mais</a></span>
-				</footer>
+			<section id="ultimos-artigos">				
+				<?php get_template_part( 'loop', 'artigos' );?>
 			</section><!-- #ultimos-artigos -->
 
 			<section id="destaque-fotos">
