@@ -158,6 +158,10 @@ body {
 	text-transform: uppercase;
 }
 
+.typedefault {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
 .borderlight(@width: 1px 0) {
 	/* use '.borderlight(top left right bottom)' para definir espessura da borda */
 
@@ -190,6 +194,12 @@ body {
 	-webkit-box-shadow: 0 0 4px 0 @lightcolor-50;
 	-moz-box-shadow:    0 0 4px 0 @lightcolor-50;
 	box-shadow: 		0 0 4px 0 @lightcolor-50;
+}
+
+.rounded(@radius:6px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
 }
 
 a, a:active, a:visited { color:  @color-20; text-decoration: none; }
@@ -432,12 +442,65 @@ nav#access,
 	#container-content {
 		.entry-content p 	{ margin-bottom: 0; }
 
-
-		section#menu-rapido {
+		section#side {
 			.column(3);
 			.pull(1);
-			margin-top: 1.8em;
+			margin-top: 8em;
+
+			section#nota-oficial,
+			section#menu-rapido {
+				position: relative;
+				float: left;
+				width: 100%;
+			}
+
+			section#nota-oficial {
+				.rounded;
+				margin: -1em 0 3.6em;
+				border: 1px solid @color-20;
+				h3 {
+					margin: 0 3.125%;
+				}
+				article {
+					.rounded;
+				}
+			}
+			section#menu-rapido {
+				.small;
+				h3 {
+					display: none;
+				}
+				ul {
+					padding: 0 3.125%;
+					list-style: none;
+					margin-left: 0;
+					li {
+						.typehumanist;
+						line-height: 1.143em; /* 16px */
+						ul.sub-menu {
+							padding: 0;
+							margin-bottom: 1.286em; /* 18px */
+							.borderblue(0.143em 0 0 0); /* 2px */
+							li {
+								.typedefault;
+								text-transform: none;
+								a {
+									line-height: 1.214em; /* 17px */
+									.borderlight(0 0 0.071em 0); /* 1px */
+									width: 100%;
+									display: block;
+									&:hover {
+										background: @lightcolor-10;
+									}
+								}
+							}
+						}
+					}
+				}
+
+			}
 		}
+
 		section#ultimas-pautas,
 		section#ultimos-artigos,
 		section#destaque-fotos,
@@ -450,6 +513,7 @@ nav#access,
 			.push(4);
 		}
 
+		section#nota-oficial,
 		section#ultimas-pautas,
 		section#ultimos-artigos,
 		section#destaque-fotos {
