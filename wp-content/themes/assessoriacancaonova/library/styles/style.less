@@ -195,6 +195,21 @@ body {
 a, a:active, a:visited { color:  @color-20; text-decoration: none; }
 a:hover { color: @color-30; }
 
+a {
+	.meta-nav {
+		width: 0;
+		height: 0;
+		border-top: 4px solid transparent;
+		border-bottom: 4px solid transparent;
+		border-left: 4px solid @color-20;
+		position: absolute;
+		margin: 6px;
+	}
+	&:hover .meta-nav {
+		border-left-color: @color-30;
+	}
+}
+
 
 ////////////
 // LAYOUT //
@@ -415,6 +430,8 @@ nav#access,
 	
 .home {			
 	#container-content {
+		.entry-content p 	{ margin-bottom: 0; }
+
 
 		section#menu-rapido {
 			.column(3);
@@ -442,11 +459,10 @@ nav#access,
 				&:hover {
 					.softgradient;
 					}
-
-				a {
-					p {	color: @darkcolor-30 !important; }
-					&:hover p { color: @darkcolor-40 !important; }
-					&:hover h4 { color: @color-40; }
+				h4 {
+					a {
+						&:hover h4 { color: @color-40; }
+					}
 				}
 			}
 

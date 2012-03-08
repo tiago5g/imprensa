@@ -31,15 +31,13 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
 <article>
-        <div>
+        <div class="entry-meta">
                 <time><?php echo get_the_date('d/m/Y'); ?></time>
         </div>
-        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                <h4><?php the_title(); ?></h4>
-                <div>
-                        <p><?php the_excerpt(); ?></p>
-                </div>
-        </a>
+        <h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
+        <div class="entry-content">
+                <?php the_excerpt(); ?>
+        </div>
 </article>
 
 <?php endwhile; ?>
