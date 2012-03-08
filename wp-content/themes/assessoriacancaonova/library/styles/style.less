@@ -448,10 +448,10 @@ nav#access,
 			margin-top: 8em;
 
 			section#nota-oficial,
-			section#menu-rapido {
+			section#menu-rapido,
+			section#mailing {
 				position: relative;
 				float: left;
-				width: 100%;
 			}
 
 			section#nota-oficial {
@@ -465,8 +465,10 @@ nav#access,
 					.rounded;
 				}
 			}
+			
 			section#menu-rapido {
 				.small;
+				width: 100%;
 				h3 {
 					display: none;
 				}
@@ -497,7 +499,18 @@ nav#access,
 						}
 					}
 				}
+			}
 
+			section#mailing {
+				.rounded;
+				.borderlight(1px);
+				margin-top: 3.6em;
+				padding: 0 3.125% .9em;
+				background-color: @lightcolor-10;
+				p, h3 {
+					color: @darkcolor-10;
+					border-color: @darkcolor-10;
+				}
 			}
 		}
 
@@ -599,37 +612,12 @@ nav#access,
 
 //////////// MEDIA-QUERY ////////////
 
-@media screen and (max-width: 600px) {
-
-	#container-content { 
-		section#menu-rapido,
-		section#ultimas-pautas,
-		section#ultimos-artigos,
-		section#destaque-fotos,
-		section#proximos-eventos {
-			.column(12);
-		}
-
-		section#destaque-fotos {				
-			.push(0);
-		}
-	}
-}
-
 @media screen and (min-width: 320px) { 
-	#container-content, #content-footer, #navbar, #signature, #menu-nav { width: 288px; } 
-}
-
-@media screen and (min-width: 480px) { 
-	#container-content, #content-footer, #navbar, #signature, #menu-nav { width: 432px; }
-}
-
-@media screen and (min-width: 600px) {
-	#container-content, #content-footer, #navbar, #signature, #menu-nav { width: 576px; }
+	#container-content, #content-footer, #navbar, #signature, #menu-nav { width: 96%; } 
 }
 
 @media screen and (min-width: 1024px) {
-	#container-content, #content-footer, #navbar, #signature, #menu-nav { width: 864px; }
+	#container-content, #content-footer, #navbar, #signature, #menu-nav { width: 960px; }
 }
 
 @media screen and (min-width: 1280px) {
@@ -638,4 +626,38 @@ nav#access,
 
 @media screen and (min-width: 2560px) {
 	#container-content, #content-footer, #navbar, #signature, #menu-nav { width: 1296px; }
+}
+
+
+////////////////////////////////////////
+
+
+@media screen and (max-width: 599px) {
+	.home {
+		#container-content { 
+			section#side {
+				display: none;
+			}
+
+			section#ultimas-pautas,
+			section#ultimos-artigos,
+			section#destaque-fotos,
+			section#proximos-eventos {
+				.column(12);
+			}
+
+			section#destaque-fotos {				
+				.push(0);
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width: 600px) {
+	
+}
+
+@media screen and (min-width: 1024px) {
+	
 }
