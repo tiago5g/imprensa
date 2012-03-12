@@ -76,11 +76,11 @@
 				<h1><a class="tipo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			</div>
 			<div id="menubar">
-				<nav id="menu-nav">
+				<nav id="menu">
 					<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
 					<a id="skip" href="#container-content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
 					<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
-					<?php wp_nav_menu( array( 'container_class' => '', 'theme_location' => 'primary', 'menu' => 'nav' ) ); ?>
+					<?php wp_nav_menu(); ?>
 				</nav>
 			</div>
 		</header>
