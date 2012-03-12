@@ -14,121 +14,49 @@
  */
 
 get_header(); ?>
-	
+
+	<div id="container-content" role="main">
+
+		<section id="side">
+    				<section id="nota-oficial">
+                    	<?php get_template_part( 'loop', 'notas' );?>
+					</section>
 			<section id="menu-rapido">
 				<header>
 					<h3>Acesso Rápido</h3>
 				</header>
-			</section><!-- #menu-rapido -->
-
-			<section id="ultimas-pautas">
+				<?php wp_nav_menu( array( 'container_class' => '', 'theme_location' => '', 'menu' => 'quick' ) ); ?>
+			</section>
+			<section id="mailing">
 				<header>
-					<h3>Pautas</h3>
+					<h3>Cadastro Mailing</h3>
 				</header>
+				<p>Cadastre-se para receber conteúdo em primeira mão.</p>
+			</section>
 
-				<article>
-					<div>
-						<time>01/01/2011</time>
-					</div>
-					<a href="#" title="Titulo da Pauta">
-						<h4>Titulo da Pauta</h4>
-						<div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
-						</div>
-					</a>
-				</article>
+		</section><!-- #side -->
 
-				<article>
-					<div>
-						<time>01/01/2011</time>
-					</div>
-					<a href="#" title="Titulo da Pauta">
-						<h4>Titulo da Pauta</h4>
-						<div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
-						</div>
-					</a>
-				</article>
+		<section id="ultimas-pautas">
+        	<?php get_template_part( 'loop', 'pautas' );?>
+		</section><!-- #ultimas-pautas -->
+		<section id="ultimos-artigos">				
+			<?php get_template_part( 'loop', 'artigos' );?>
+		</section><!-- #ultimos-artigos -->
 
-				<article>
-						<div>
-							<time>01/01/2011</time>
-						</div>
-						<a href="#" title="Titulo da Pauta">
-							<h4>Titulo da Pauta</h4>
-							<div>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
-							</div>
-						</a>
-				</article>
-				
-				<footer>
-					<span><a href="#" title="">veja mais</a></span>
-				</footer>
-			</section><!-- #ultimas-pautas -->
+		<section id="destaque-fotos">
+			<header>
+				<h3>Fotos</h3>
+			</header>
+			<footer>
+				<span><a href="#" title="">veja mais</a></span>
+			</footer>
+		</section><!-- #destaque-fotos -->
 
-			<section id="ultimos-artigos">
-				<header>
-					<h3>Artigos</h3>
-				</header>
-				
-				<article>
-					<div>
-						<time>01/01/2011</time>
-						<span>Categoria</span>
-					</div>
-					<a href="#" title="Titulo do Artigo">
-						<h4>Titulo do Artigo</h4>
-						<div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
-						</div>
-					</a>
-				</article>
-
-				<article>
-					<div>
-						<time>01/01/2011</time>
-						<span>Categoria</span>
-					</div>
-					<a href="#" title="Titulo do Artigo">
-						<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-						<div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
-						</div>
-					</a>
-				</article>
-
-				<article>
-					<div>
-						<time>01/01/2011</time>
-						<span>Categoria</span>
-					</div>
-					<a href="#" title="Titulo do Artigo">
-						<h4>Titulo do Artigo</h4>
-						<div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta ante vitae augue fermentum non volutpat nisl porta.</p>
-						</div>
-					</a>
-				</article>
-				
-				<footer>
-					<span><a href="#" title="">veja mais</a></span>
-				</footer>
-			</section><!-- #ultimos-artigos -->
-
-			<section id="destaque-fotos">
-				<header>
-					<h3>Fotos</h3>
-				</header>
-				<footer>
-					<span><a href="#" title="">veja mais</a></span>
-				</footer>
-			</section><!-- #destaque-fotos -->
-
-			<section id="proximos-eventos">
-				<header>
-					<h3>Eventos</h3>
-				</header>
-			</section><!-- #proximos-eventos -->
+		<section id="proximos-eventos">
+			<header>
+				<h3>Eventos</h3>
+			</header>
+		</section><!-- #proximos-eventos -->
+	</div><!-- #main -->
 
 <?php get_footer(); ?>
