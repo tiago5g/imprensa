@@ -19,10 +19,10 @@
 define('DB_NAME', 'imprensa');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'imprensa');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'imprensa');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -42,14 +42,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '{>JBa,93&FBdppX+Dv.Pu57<I8pv0RjbHCmk5J}Ch(c5B&NVbF2^D?EHn8@2*I*H');
-define('SECURE_AUTH_KEY',  '4[ 1cBdcMr{|qSu*0Zuqv,K6*vjLU}#$AXdr,v?^)O5z.TN1&{#qM#d~yb$3BAR.');
-define('LOGGED_IN_KEY',    'Re(BHbr;h05Ei@]zFtz[%r+P},~PmjVu a(Ft|79,1A!M ^]Td0R6Yu4NKX/>Lan');
-define('NONCE_KEY',        '6bK#*;sx_#ZjxA2Th[b[Efz&,!6i.|xZ.b+1oNY)zJBH#{hf !%~_4uBsgyz:6L<');
-define('AUTH_SALT',        'KM]9v EUnyj8h~-PC_eMRi.s4orWHHa~GZ;dcWx}`^$C>vqCZ9!H2!I,O97|0kCr');
-define('SECURE_AUTH_SALT', 'uYOJKpP@ xq`7]ggrDojlG2nSNKqdzwEO&uk7gA{XKn6C3^Y`nHa,C9p>VIi+DxH');
-define('LOGGED_IN_SALT',   '7T)ayY[-VoW_34KvqF}xyND]<zZpN@ZGO?<OJ2e<T?zUm+:T8&K-oi6,3P<5k5z!');
-define('NONCE_SALT',       'q!T.*IHNGP1MaP*d3inMzMYlSAj;haO|&9GvrnowTIUz04VKPmC8tw2o.%]|2D[<');
+define('AUTH_KEY',         '/-~,;wy|o},&D~].Cf]/m%c/%n4v%v+3{3l=?VK3$/6<)OY7 SQV3B#9,)*$$2O@');
+define('SECURE_AUTH_KEY',  'Y=beNLn|ksWc!7wy9&L(PG*%iu)COHdSb?.NM_oL+P2@/&uxk-BI|_(*#{uRY-,-');
+define('LOGGED_IN_KEY',    '|*Miv4dk=a:6L)~5[Yv+:taNXT!Fz+rpLqf0+ob<-_2T=*WvWQTYp}~Z;99~o%WH');
+define('NONCE_KEY',        'khO42$|h}U&Qy)N0Hpd@K3)AU{; UE@h-:5e 7(vKb-#7r_S|3GKfoSDz+Y6~%se');
+define('AUTH_SALT',        'U7[B24rCjd2/`||;!o|1Aki[Q2ohj_a-|<[3|U+i3@0@8$)P=99g%NqmBQ|Y;siX');
+define('SECURE_AUTH_SALT', '08lUMExRRk3&aL1u:gY-|S Clc-QNe5y?xQ:(pjGcklCB,Ru!Z{4?1Q8d+~T:Z I');
+define('LOGGED_IN_SALT',   '43Sd|X|uNR9A/evRG*-&U`%ApsO-?_7E]K7NxFpSI!=2`/f4~H.fUW??E]w3Vz%2');
+define('NONCE_SALT',       ']@9<Gd(T|EEimz_z-Ca-:F~VNQ4_slya}n1B)Ysvm!Jz`AP9_ 1cEp%qbg5o*<.N');
 
 /**#@-*/
 
@@ -69,7 +69,7 @@ $table_prefix  = 'wp_';
  * de_DE.mo to wp-content/languages and set WPLANG to 'de_DE' to enable German
  * language support.
  */
-define('WPLANG', 'pt_BR');
+define('WPLANG', '');
 
 /**
  * For developers: WordPress debugging mode.
