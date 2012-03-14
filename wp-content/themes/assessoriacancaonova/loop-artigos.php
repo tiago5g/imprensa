@@ -44,7 +44,6 @@
                             <p><?php the_excerpt(); ?></p>
                     </div>
             </a>
-=======
     <div class="entry-meta">
         <time><?php echo get_the_date('d/m/Y'); ?></time>
         <span><?php echo $category[0]->name; ?></span>
