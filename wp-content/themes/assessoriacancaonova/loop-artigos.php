@@ -24,30 +24,25 @@
 
 
 
-<?php query_posts( array ( 'post_type' => 'artigo', 'posts_per_page' => 3 ) ); ?>
+<?php query_posts( array ( 'category_name' => 'Artigos', 'posts_per_page' => 3 ) ); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 <?php $id = get_the_ID();
-      $category = get_the_terms($id,'tipos-artigos');
+      $category = get_the_category($id);
 ?>
 <article>
-            <div>
-                    <time><?php echo get_the_date('d/m/Y'); ?></time>
-                    <?php foreach($category as $cat){?>
-                    <span><?php echo $cat->name; ?></span>
-                    <?php }?>
-                    
-            </div>
-            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                    <h4><?php the_title(); ?></h4>
-                    <div>
-                            <p><?php the_excerpt(); ?></p>
-                    </div>
-            </a>
+    <div class="entry-meta">
+        <time><?php echo get_the_date('d/m/Y'); ?></time>
+        <span><?php echo $category[0]->name; ?></span>
+    </div>
+    <h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
+    <div class="entry-content">
+        <?php the_excerpt(); ?>
+    </div>
 </article>
 <?php endwhile; ?>
 
 
 <footer>
-        <span><a href="<?php echo get_category_link(get_cat_id("Artigos")); ?>" title="">veja mais</a></span>
+    <span><a href="<?php echo get_category_link(get_cat_id("Artigos")); ?>" title="">veja mais</a></span>
 </footer>

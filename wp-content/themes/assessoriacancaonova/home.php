@@ -16,14 +16,25 @@
 get_header(); ?>
 
 	<div id="container-content" role="main">
+
+		<section id="side">
     				<section id="nota-oficial">
                     	<?php get_template_part( 'loop', 'notas' );?>
 					</section>
-		<section id="menu-rapido">
-			<header>
-				<h3>Acesso Rápido</h3>
-			</header>
-		</section><!-- #menu-rapido -->
+			<section id="menu-rapido">
+				<header>
+					<h3>Acesso Rápido</h3>
+				</header>
+				<?php wp_nav_menu( array( 'container_class' => '', 'theme_location' => '', 'menu' => 'quick' ) ); ?>
+			</section>
+			<section id="mailing">
+				<header>
+					<h3>Cadastro Mailing</h3>
+				</header>
+				<p>Cadastre-se para receber conteúdo em primeira mão.</p>
+			</section>
+
+		</section><!-- #side -->
 
 		<section id="ultimas-pautas">
         	<?php get_template_part( 'loop', 'pautas' );?>

@@ -9,9 +9,7 @@
         <?php $checker++; ?>
         <?php } ?>
                 <article>
-                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                                <h4><?php the_title(); ?></h4>
-                        </a>
+                        <h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
                 </article>
 
 
