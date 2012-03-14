@@ -24,13 +24,28 @@
 
 
 
-<?php query_posts( array ( 'category_name' => 'Artigos', 'posts_per_page' => 3 ) ); ?>
+<?php query_posts( array ( 'post_type' => 'artigo', 'posts_per_page' => 3 ) ); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 <?php $id = get_the_ID();
-      $category = get_the_category($id);
+      $category = get_the_terms($id,'tipos-artigos');
 ?>
 <article>
+<<<<<<< HEAD
+            <div>
+                    <time><?php echo get_the_date('d/m/Y'); ?></time>
+                    <?php foreach($category as $cat){?>
+                    <span><?php echo $cat->name; ?></span>
+                    <?php }?>
+                    
+            </div>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                    <h4><?php the_title(); ?></h4>
+                    <div>
+                            <p><?php the_excerpt(); ?></p>
+                    </div>
+            </a>
+=======
     <div class="entry-meta">
         <time><?php echo get_the_date('d/m/Y'); ?></time>
         <span><?php echo $category[0]->name; ?></span>
@@ -39,6 +54,7 @@
     <div class="entry-content">
         <?php the_excerpt(); ?>
     </div>
+>>>>>>> 25f49a0d49829eaf62cf9b6e38843bf97bd5e6ae
 </article>
 <?php endwhile; ?>
 
