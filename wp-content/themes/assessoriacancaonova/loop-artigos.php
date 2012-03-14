@@ -31,7 +31,6 @@
       $category = get_the_terms($id,'tipos-artigos');
 ?>
 <article>
-<<<<<<< HEAD
             <div>
                     <time><?php echo get_the_date('d/m/Y'); ?></time>
                     <?php foreach($category as $cat){?>
@@ -54,7 +53,6 @@
     <div class="entry-content">
         <?php the_excerpt(); ?>
     </div>
->>>>>>> 25f49a0d49829eaf62cf9b6e38843bf97bd5e6ae
 </article>
 <?php endwhile; ?>
 
