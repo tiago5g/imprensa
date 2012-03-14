@@ -31,7 +31,7 @@
       $category = get_the_terms($id,'tipos-artigos');
 ?>
 <article>
-            <div>
+            <div class="entry-meta">
                     <time><?php echo get_the_date('d/m/Y'); ?></time>
                     <?php foreach($category as $cat){?>
                     <span><?php echo $cat->name; ?></span>
@@ -40,18 +40,10 @@
             </div>
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                     <h4><?php the_title(); ?></h4>
-                    <div>
+                    <div class="entry-content">
                             <p><?php the_excerpt(); ?></p>
                     </div>
             </a>
-    <div class="entry-meta">
-        <time><?php echo get_the_date('d/m/Y'); ?></time>
-        <span><?php echo $category[0]->name; ?></span>
-    </div>
-    <h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
-    <div class="entry-content">
-        <?php the_excerpt(); ?>
-    </div>
 </article>
 <?php endwhile; ?>
 

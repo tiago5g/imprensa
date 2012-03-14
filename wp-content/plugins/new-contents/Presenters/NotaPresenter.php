@@ -19,10 +19,11 @@
            static function save_show_index_box($nota_id){
                if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
                 return;
+                $show_index;
+               if ( ! $_POST['show_index'] ) $show_index = false;
+               else                          $show_index = true;
 
-               if ( ! $_POST['show_index'] ) return;
-
-               update_post_meta($nota_id, 'show_index', $_POST['show_index']);
+               update_post_meta($nota_id, 'show_index', $show_index);
 
            }
 
