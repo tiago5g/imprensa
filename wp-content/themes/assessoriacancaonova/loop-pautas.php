@@ -26,7 +26,7 @@
 
 
 
-<?php query_posts( array ( 'category_name' => 'Pautas', 'posts_per_page' => 3 ) ); ?>
+<?php query_posts( array ( 'post_type' => 'pauta', 'posts_per_page' => 3 ) ); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
