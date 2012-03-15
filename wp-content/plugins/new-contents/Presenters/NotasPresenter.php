@@ -1,13 +1,13 @@
 <?php
         namespace NC ;
 
-        class NotaPresenter{
+        class NotasPresenter{
 
             static function add_show_index_box() {
                             add_meta_box(
                                 'nota_index_id',
                                 'Exibir na Index',
-                                'NC\NotaPresenter::view_show_index_box',
+                                'NC\NotasPresenter::view_show_index_box',
                                 'nota'
                             );
            }
@@ -28,8 +28,8 @@
            }
 
             static function build(){
-                            add_action('add_meta_boxes', 'NC\NotaPresenter::add_show_index_box');
-                            add_action( 'save_post', 'NC\NotaPresenter::save_show_index_box' );
+                            add_action('add_meta_boxes', 'NC\NotasPresenter::add_show_index_box');
+                            add_action( 'save_post', 'NC\NotasPresenter::save_show_index_box' );
             }
         }
 

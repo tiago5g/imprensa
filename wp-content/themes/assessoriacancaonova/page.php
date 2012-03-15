@@ -15,7 +15,7 @@
 get_header(); ?>
 
 	<div id="container-content" role="main">
-		<div id="content">
+		<section id="content">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<?php if ( is_front_page() ) { ?>
@@ -23,6 +23,19 @@ get_header(); ?>
 				<?php } else { ?>	
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 				<?php } ?>
+                                        <div class="">
+                                                <div >
+                                                        <?php the_post_thumbnail(); ?>
+                                                </div>
+                                                <div>
+                                                        <? echo get_post_meta(get_the_ID(), 'numeros', true); ?>
+                                                </div>
+                                                <section id="destaque-fotos">
+                                                        <footer>
+                                                                <span><a href="#" title="">mais fotos</a></span>
+                                                        </footer>
+                                                </section><!-- #destaque-fotos -->
+                                        </div>
 					<div class="entry-content">
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'boilerplate' ), 'after' => '' ) ); ?>
@@ -30,7 +43,7 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-## -->
 			<?php endwhile; ?>
-		</div> <!-- #content -->
+		</section> <!-- #content -->
 
 <!--?php get_sidebar(); ?-->
 	</div><!-- #main -->
