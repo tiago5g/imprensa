@@ -1,0 +1,2 @@
+<?php  if(get_post_meta( $nota->ID, 'show_index', true )!="") $check = "checked"; ?>
+<input type="checkbox" name="show_index" id="show_index" value="true" <?php echo $check; ?> /> Exibir Nota Oficial na Index
