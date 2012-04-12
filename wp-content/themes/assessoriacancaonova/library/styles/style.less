@@ -1,6 +1,5 @@
 @import 'less/grid.less';
 
-
 //////////
 // GRID //
 //////////
@@ -221,6 +220,10 @@ a {
 }
 
 
+.content {
+	margin-top: 18px;
+}
+
 ////////////
 // LAYOUT //
 ////////////
@@ -231,11 +234,15 @@ nav#access,
 	.column(12);
 }
 
-#container-content, #content-footer, #navbar, #signature, #menu-nav { margin: 0 auto; overflow: hidden; }
+#container-content, #content-footer, #navbar, #signature { margin: 0 auto; overflow: hidden; }
+
+#menu-nav{ margin: 0 auto; }
 
 #container-content {
 	.post .entry-meta 	{ margin-bottom: 1.8em; }	/* 18px */
 	.entry-content p 	{ margin-bottom: 1.286em; }	/* 18px */
+
+	min-height: 500px;
 
 	#content {
 		.column(6,12);
@@ -287,7 +294,7 @@ nav#access,
 					margin: 0;
 					display: inline;
 					}
-				ul li {
+				li {
 					float: left;
 					}
 				#top-nav { 
@@ -348,7 +355,7 @@ nav#access,
 			height: 3em;
 			margin: 0 auto;
 			font-size: 1.2em;
-			border-bottom: solid 1px #001829;
+			border-top: solid 1px #001829;
 			background: #00548c; /* Old browsers */
 			background: -moz-linear-gradient(top,  #00548c 0%, #003659 100%); /* FF3.6+ */
 			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00548c), color-stop(100%,#003659)); /* Chrome,Safari4+ */
@@ -357,17 +364,16 @@ nav#access,
 			background: -ms-linear-gradient(top,  #00548c 0%,#003659 100%); /* IE10+ */
 			background: linear-gradient(top,  #00548c 0%,#003659 100%); /* W3C */
 			.downshadow;
+			position: relative;
+			z-index: 9994;
 
-			ul { 
-				width: auto;
-				margin: 0;
-				display: inline;
-				}
-			ul li {
-				float: left;
-				}
+
 			#menu-nav { 
+				
 				font-family: Arial, Helvetica, sans-serif;
+				position: relative;
+				z-index: 9999;				
+
 				a { 
 					padding: 0 5px;
 					display: block;
@@ -377,48 +383,56 @@ nav#access,
 						color: #0073BF;
 						}
 					}
-				li { 
-					line-height: 36px;
-					&:hover {
-						border-left: 1px solid #003659;
-						border-right: 1px solid #003659;
-						box-shadow: 0px 5px 5px #B1B2B2 inset;
-						background-color: #E0E0E0;
-						}
-					}
-				a:hover { 
-					color: #0073BF;
-					padding: 0 4px;
-
-					}
-				li { 
-					line-height: 36px;
-					&:hover {
-							border-top: 1px solid #B2B2B2;
-							box-shadow: 0px 5px 5px #B1B2B2 inset;
-							background-color: #E0E0E0;
-							}
-					}
 				ul {
+					width: auto;
 					margin: 0;
 					position: relative;
+					
+					li {
+						float: left; 
+						line-height: 36px;
+						width: auto;
+						position: relative;
+						&:hover {
+							background-color: #E0E0E0;
+							z-index: 9999;
+							a {
+								color: #003659;
+							}
+							ul.sub-menu { 
+										display: block;
+										a {
+											color: #003659;
+										}
+							}
+							
+						}
+						ul.sub-menu {
+							width: 200px;
+							height: auto;
+							display: none;
+							position: absolute;
+							z-index: 9995;
+							background-color: #E0E0E0;
+							box-shadow: 0px 2px 5px #B1B2B2;
+							li {
+								width: 200px;
+								box-shadow: none;
+								a {
+									color: #003659;
+								}
+								&:hover {
+										background-color: @lightcolor-60;
+								}
+							}
+						}
 					}
+				}
+
 				#skip {
 					display: none;
-				}
-				#menu-header{
-					a {
-						color: @color-20;
-					}
-					ul {
-						visibility: hidden;
-						position: absolute;
-					}
-					li {
-						float:left;
-					}
-
-				}
+					}				
+			
 			}
 		}
 	}
@@ -428,11 +442,12 @@ nav#access,
 
 #container-footer {
 	background: url(../../images/bg_grain_gray.jpg) 0 0 repeat @lightcolor-30;
-	height: 16.1em;
+	height: 72px;
 	margin-top: 3.6em;
 	padding-top: 1.8em;
 	.borderblue(.1em 0 0 0);
 	.topshadow;
+
 }
 
 
@@ -571,6 +586,49 @@ nav#access,
 	}
 }
 
+//////////// SOBRE A ASSESSORIA ////////////
+
+#content_esquerda {
+	.column(6);
+
+	#info {
+		margin-bottom: 18px;
+	}
+	
+	#contatos {
+		span{
+			color: @color-20;
+			font-size: 14px;
+			text-transform: none;
+		}
+
+		#email{
+			.column(3,6);
+		}
+		#telefone{
+			.column(3,6);
+		}
+	}
+
+}
+
+#content_direita {
+	.column(6);
+	#colaboradores{
+		ul {
+			.column(6,6);
+			li {
+				.column(2,6);
+				span.nome{
+					font-size: 12px;
+				}
+				span.cargo{
+					font-size: 10px;
+				}
+			}
+		}
+	}
+}
 
 //////////// CATEGORIA ////////////
 
