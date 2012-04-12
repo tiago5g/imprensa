@@ -7,13 +7,27 @@ get_header(); ?>
 	<div id="container-content" role="main">
 		<div  class="content">
 			<div id="content_esquerda">
-			
+			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+                        <?php
+                         //consulta sobre assessoria
+                        global $wpdb ;
+                        $email = array();$telefone = array();
+                        $id = get_the_ID();
+	$sql = $wpdb->prepare("SELECT meta_key, meta_value from $wpdb->postmeta INNER JOIN $wpdb->posts
+                ON ($wpdb->postmeta.post_id = $wpdb->posts.ID)where post_id = %d",
+				$id) ;
+	$attr = $wpdb->get_results($sql);
+        foreach($attr as $d){
+            if($d->meta_key=='email')$email[] = $d->meta_value;
+            if($d->meta_key=='telefone')$telefone[] = $d->meta_value;
+        }
+                        ?>
 			<!-- Sobre a assessoria -->
 				<div id="info">
-					<h1>Sobre a Assessoria</h1>
+					<h1><?php the_title(); ?></h1>
 					<div>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin semper porta facilisis. Mauris sapien eros, facilisis eu dapibus vitae, semper euismod elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In enim arcu, condimentum rhoncus posuere in, porttitor eget tellus. Nullam a gravida nibh. Pellentesque id mi est, nec commodo odio. Phasellus porttitor adipiscing nulla, ac blandit arcu posuere vel. Praesent volutpat imperdiet nisi, et laoreet mauris fringilla a. Ut hendrerit ultrices egestas. Fusce tincidunt lacinia fermentum. 
+							<?php the_content(); ?>
 						</p>
 					</div>
 				</div>
@@ -24,20 +38,21 @@ get_header(); ?>
 
 					<div id="email">
 						<span>e-Mail</span>
-						<p>email@cancaonova.com</p>
-						<p>email@cancaonova.com</p>
-						<p>email@cancaonova.com</p>
+						<?php foreach($email as $m) :?>
+                                                    <p><?php echo $m; ?></p>
+                                                <?php endforeach?>
 					</div>
 
 					<div id="telefone">
 						<span>Telefone</span>
-						<p>+55(12)7777-7777</p>
-						<p>+55(12)7777-7777</p>
+						<?php foreach($telefone as $tel) :?>
+                                                    <p><?php echo $tel; ?></p>
+                                                <?php endforeach?>
 					</div>
 
 				</div>
 			</div><!-- Content_esquerda -->
-
+                        <?php endwhile; ?>
 			<div id="content_direita">
 			<!-- colaboradores -->
 				<div id="colaboradores">
