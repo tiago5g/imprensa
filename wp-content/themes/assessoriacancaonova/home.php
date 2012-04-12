@@ -25,7 +25,7 @@ get_header(); ?>
 				<header>
 					<h3>Acesso Rápido</h3>
 				</header>
-				<?php wp_nav_menu( array( 'container_class' => '', 'theme_location' => '', 'menu' => 'quick' ) ); ?>
+				<?php wp_page_menu( ); ?>
 			</section>
 			<section id="mailing">
 				<header>
@@ -47,6 +47,7 @@ get_header(); ?>
 			<header>
 				<h3>Fotos</h3>
 			</header>
+                        <?php echo do_shortcode("[slickr-flickr tag=\"musicos\"]"); ?>
 			<footer>
 				<span><a href="#" title="">veja mais</a></span>
 			</footer>

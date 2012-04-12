@@ -92,9 +92,12 @@ function boilerplate_setup() {
 	if ( is_readable( $locale_file ) )
 		require_once( $locale_file );
 
-	// This theme uses wp_nav_menu() in one location.
+	// This theme uses wp_nav_menu() in two location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Navigation', 'boilerplate' ),
+	) );
+        register_nav_menus( array(
+		'secundary' => __( 'Secundary Navigation', 'boilerplate' ),
 	) );
 
 	// This theme allows users to set a custom background

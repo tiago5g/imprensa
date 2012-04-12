@@ -48,28 +48,7 @@
 	<div id="container-header">
 		<div id="globalbar">
 			<nav id="navbar">
-				
-				<ul id="top-nav">
-					<li>
-						<a href="http://tv.cancaonova.com/" title="TV Can&ccedil;&atilde;o Nova">TV</a>
-					</li>
-					<li>
-						<a href="http://radio.cancaonova.com/" title="R&aacute;dio AM Can&ccedil;&atilde;o Nova">R&aacute;dio AM</a>
-					</li>
-					<li>
-						<a href="http://blog.cancaonova.com/radiofm/" title="R&aacute;dio FM Can&ccedil;&atilde;o Nova">R&aacute;dio FM</a>
-					</li>
-					<li>
-						<a href="http://m.cancaonova.com/" title="Can&ccedil;&atilde;o Nova Mobile">Mobile</a>
-					</li>
-					<li>
-						<a href="http://chat.cancaonova.com/" title="Chat Can&ccedil;&atilde;o Nova">Chat</a>
-					</li>	
-					<li>
-						<a href="http://loja.cancaonova.com/" title="Loja Virtual Can&ccedil;&atilde;o Nova">Loja</a>
-					</li>
-				</ul>
-			
+                                <?php wp_nav_menu(array('theme_location'=> 'primary','container'=> 'div','container_id'=> 'top-nav','container_class'=>'top-nav')); ?>
 			</nav>
 		</div>
 		<header>
@@ -82,7 +61,7 @@
 					<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
 					<a id="skip" href="#container-content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
 					<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
-					<?php wp_nav_menu( array( 'container_class' => '', 'theme_location' => 'primary', 'menu' => 'nav' ) ); ?>
+					<?php wp_nav_menu( array( 'container_class' => '', 'theme_location' => 'secondary', 'menu' => 'nav' ) ); ?>
 				</nav>
 			</div>
 		</header>
