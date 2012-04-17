@@ -18,14 +18,14 @@ get_header(); ?>
 	<div id="container-content" role="main">
 
 		<section id="side">
-    				<section id="nota-oficial">
-                    	<?php get_template_part( 'loop', 'notas' );?>
-					</section>
+    			<section id="nota-oficial">
+                                <?php get_template_part( 'loop', 'notas' );?>
+			</section>
 			<section id="menu-rapido">
 				<header>
 					<h3>Acesso Rápido</h3>
 				</header>
-				<?php wp_page_menu( ); ?>
+				<?php wp_page_menu( );?>
 			</section>
 			<section id="mailing">
 				<header>

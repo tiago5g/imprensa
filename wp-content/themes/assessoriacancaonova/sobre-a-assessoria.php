@@ -55,32 +55,20 @@ get_header(); ?>
                         <?php endwhile; ?>
 			<div id="content_direita">
 			<!-- colaboradores -->
-				<div id="colaboradores">
+                                <div id="colaboradores">
 					<h1>Colaboradores</h1>
-					
-					<ul>
+					<?php query_posts( array ( 'post_type' => 'colaborador') ); ?>
+                                        <ul>
+                                        <?php while ( have_posts() ) : the_post(); ?>					
 						<li>
-							<img src="<?php bloginfo('url')?>/wp-content/themes/assessoriacancaonova/images/gray.jpg" width="144" height="144">
-							<span class="nome">Osvaldo Luis</span></br>
-							<span class="cargo">Gerente - Jornalista</span>
-						</li>
+							<img src="<?php echo get_post_meta(get_the_ID(), 'foto', true);?>" width="144" height="144">
+							<span class="nome"><?php the_title(); ?></span></br>
+							<span class="cargo"><?php echo get_post_meta(get_the_ID(), 'funcao', true);?></span>
+						</li>					
+                                        <?php endwhile; ?>
+                                        </ul>
 
-						<li>
-							<img src="<?php bloginfo('url')?>/wp-content/themes/assessoriacancaonova/images/gray.jpg" width="144" height="144">
-							<span class="nome">Ana Paula Castro</span></br>
-							<span class="cargo">Jornalista</span>
-						</li>
-
-						<li>
-							<img src="<?php bloginfo('url')?>/wp-content/themes/assessoriacancaonova/images/gray.jpg" width="144" height="144">
-							<span class="nome">Fulana de tal</span></br>
-							<span class="cargo">Jornalista</span>
-						</li>
-
-
-					</ul>
-						
-				</div>
+				</div>				
 
 			</div><!-- content_direita -->
 

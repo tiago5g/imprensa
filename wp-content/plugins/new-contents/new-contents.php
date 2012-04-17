@@ -36,11 +36,13 @@
                 }
         }
 
-        require_once 'Models/Artigo.php' ;              NC\Artigo::build() ;
-        require_once 'Models/Nota.php';                 NC\Nota::build();
-        require_once 'Presenters/NotasPresenter.php';    NC\NotasPresenter::build();
-        require_once 'Models/Pauta.php';                NC\Pauta::build();
-        require_once 'Presenters/PagesPresenter.php';    NC\PagesPresenter::build();
+        require_once 'Models/Artigo.php' ;                      NC\Artigo::build() ;
+        require_once 'Models/Nota.php';                         NC\Nota::build();
+        require_once 'Presenters/NotasPresenter.php';           NC\NotasPresenter::build();
+        require_once 'Models/Pauta.php';                        NC\Pauta::build();
+        require_once 'Presenters/PagesPresenter.php';           NC\PagesPresenter::build();
+        require_once 'Models/Colaborador.php';                  NC\Colaborador::build();
+        require_once 'Presenters/ColaboradoresPresenter.php';   NC\ColaboradoresPresenter::build();
 
         add_filter('init', array('NewContents','initialize'),0);
 ?>
