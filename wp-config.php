@@ -22,7 +22,7 @@ define('DB_NAME', 'imprensa');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '123456');
+define('DB_PASSWORD', 'root');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -42,14 +42,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '/-~,;wy|o},&D~].Cf]/m%c/%n4v%v+3{3l=?VK3$/6<)OY7 SQV3B#9,)*$$2O@');
-define('SECURE_AUTH_KEY',  'Y=beNLn|ksWc!7wy9&L(PG*%iu)COHdSb?.NM_oL+P2@/&uxk-BI|_(*#{uRY-,-');
-define('LOGGED_IN_KEY',    '|*Miv4dk=a:6L)~5[Yv+:taNXT!Fz+rpLqf0+ob<-_2T=*WvWQTYp}~Z;99~o%WH');
-define('NONCE_KEY',        'khO42$|h}U&Qy)N0Hpd@K3)AU{; UE@h-:5e 7(vKb-#7r_S|3GKfoSDz+Y6~%se');
-define('AUTH_SALT',        'U7[B24rCjd2/`||;!o|1Aki[Q2ohj_a-|<[3|U+i3@0@8$)P=99g%NqmBQ|Y;siX');
-define('SECURE_AUTH_SALT', '08lUMExRRk3&aL1u:gY-|S Clc-QNe5y?xQ:(pjGcklCB,Ru!Z{4?1Q8d+~T:Z I');
-define('LOGGED_IN_SALT',   '43Sd|X|uNR9A/evRG*-&U`%ApsO-?_7E]K7NxFpSI!=2`/f4~H.fUW??E]w3Vz%2');
-define('NONCE_SALT',       ']@9<Gd(T|EEimz_z-Ca-:F~VNQ4_slya}n1B)Ysvm!Jz`AP9_ 1cEp%qbg5o*<.N');
+define('AUTH_KEY',         'F4IhAB}NQ3yATy@qd$ ~WnJnJJ*7C1A>/zbcC0etcm];8|RFnQ-Og:x&fYKm_%1@');
+define('SECURE_AUTH_KEY',  '=>ZfRi0k:A+ ArD^m,/J]~YAj}XX*3g{WOY/wRj66ZC>Gib:%U5snz}/lMdVQg[A');
+define('LOGGED_IN_KEY',    '>efT.AR%|e.MM0sm=x.nd/B]JMhWMuF5/2 OM3ztKi@4G;o)(5JLH1sYx<9.[Uvt');
+define('NONCE_KEY',        'y_HDE&Z#L5Z>G)U|SMf/3!/FnzS>3{6`MYlR2zD7Ple_sn4MV8&@yq~~fFVV=Jfy');
+define('AUTH_SALT',        'o.x^t2}&[uN4I?t;VTI,jA0IP(Z&@i^ikB{wNb`;ihNIFd?3$p~I^/Z)<Rw6~t*$');
+define('SECURE_AUTH_SALT', 'co@~hg-u ;s<+_K!t{w!37wYi}79?~)l%D#*~|X]?/j.$FDNn>A`74UzpLIpss,7');
+define('LOGGED_IN_SALT',   ';!kypw!e}H9fYGjDs!>0pFvzXj&!+ee1OT/e)egVyh75 DjkX{<pfq?5p.`sq<k6');
+define('NONCE_SALT',       'aC1WK_V1q9._EuzwhrC3-MpCj%~n}xeS}q#,n}$ $HN*%-~*_dl l*KrEnM@hlYC');
 
 /**#@-*/
 
@@ -69,7 +69,7 @@ $table_prefix  = 'wp_';
  * de_DE.mo to wp-content/languages and set WPLANG to 'de_DE' to enable German
  * language support.
  */
-define('WPLANG', 'pt_BR');
+define('WPLANG', '');
 
 /**
  * For developers: WordPress debugging mode.
