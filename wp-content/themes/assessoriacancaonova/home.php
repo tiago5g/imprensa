@@ -25,7 +25,7 @@ get_header(); ?>
 				<header>
 					<h3>Acesso Rápido</h3>
 				</header>
-				<?php wp_page_menu( );?>
+				<?php wp_nav_menu( array( 'container_class' => '', 'theme_location' => '', 'menu' => 'quick' ) ); ?>
 			</section>
 			<section id="mailing">
 				<header>
