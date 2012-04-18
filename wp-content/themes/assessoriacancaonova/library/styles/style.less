@@ -219,7 +219,6 @@ a {
 	}
 }
 
-
 .content {
 	margin-top: 18px;
 }
@@ -339,9 +338,9 @@ nav#access,
 			a.tipo {
 				.typehumanist;
 				font-weight: normal;
-				line-height: 2.667em;
+				line-height: 72px;
 				width: 11.667em;
-				font-size: 2.7em;
+				font-size: 27px;
 				text-decoration: none;
 				display: block;
 				float: left;
@@ -553,6 +552,7 @@ nav#access,
 					.softgradient;
 					}
 				h4 {
+					margin: 0;
 					a {
 						&:hover h4 { color: @color-40; }
 					}
@@ -561,11 +561,15 @@ nav#access,
 					a{
 						display: block;
 					}
+					p{
+						margin: 0;
+					}
 				}
 			}
 
 			footer {
 				padding: .9em 0 0;
+				bottom: 0;
 				a {
 					.tiny;
 					line-height: 1.7em;
@@ -617,8 +621,10 @@ nav#access,
 	#colaboradores{
 		ul {
 			.column(6,6);
+			padding: 0;
 			li {
 				.column(2,6);
+				min-width: 144px;
 				span.nome{
 					font-size: 12px;
 				}
@@ -645,13 +651,16 @@ nav#access,
 		margin-left: 0;
 		background-color: @lightcolor-10;
 		padding: 36px 0 18px 0;
+		min-height: 438px;
 		
-		h2 {
+		div h2 {
 			font-family: "Humanst521BTRoman", Arial, Helvetica, sans-serif;
 			font-size: 14px;
 			line-height: 18px;
 			font-weight: normal;
 			color: @color-20;
+			margin: 0;
+			
 		}
 		
 		input {
@@ -678,6 +687,7 @@ nav#access,
 		.nome { 
 			margin: 0 10% 18px 10%;
 			width: 80%;
+
 		}
 		.email {
 			margin: 0 10% 18px 10%;
@@ -788,34 +798,55 @@ nav#access,
 		.nome { 
 			margin: 0 10% 18px 10%;
 			width: 80%;
+			h2 {
+				margin: 0;
+			}
 		}
 		.email {
 			margin: 0 10% 18px 10%;
 			width: 80%;
+			h2 {
+				margin: 0;
+			}
 		}
 		.midia {
 			margin: 0 10% 18px 10%;
 			width: 80%;
+			h2 {
+				margin: 0;
+			}
 		}
 		.telefone1 {
 			margin: 0 5% 18px 10%;
 			width: 35%;
 			float: left;
+			h2 {
+				margin: 0;
+			}
 		}
 		.telefone2 {
 			margin: 0 10% 18px 5%;
 			width: 35%;
 			float: right;
+			h2 {
+				margin: 0;
+			}
 		}
 		.estado {
 			margin: 0 5% 18px 10%;
 			width: 35%;
 			float: left;
+			h2 {
+				margin: 0;
+			}
 		}
 		.cidade {
 			margin: 0 10% 18px 5%;
 			width: 35%;
 			float: right;
+			h2 {
+				margin: 0;
+			}
 		}
 		.validacao {
 			margin: 0 10% 18px 10%;
@@ -849,6 +880,80 @@ nav#access,
 				overflow: auto;
 				height: 441px;
 		}
+	}
+}
+//////////// PERFIL ////////////
+
+#perfil-personalidade {
+
+	h1 {
+		margin-bottom: 18px;
+	}
+	.column(9);
+	
+	#fotos {
+		.column(2,9);
+		min-width: 140px;
+		
+		#foto-perfil {
+				padding-bottom: 18px;
+				border-bottom: 1px solid @lightcolor-40;
+		}
+		ul {
+			float: left;
+			width: 140px;
+			padding: 0;
+			margin: 18px 0;
+			li {
+				margin: 0 0 0px 10px;
+				float: left;
+				list-style: none;
+				padding-bottom: 18px;
+			}
+		}
+	}
+
+	#conteudo {
+		.column(7,9);
+		background-color: @lightcolor-20;
+	}
+}
+
+#perfil-institucional {
+
+	h1 {
+		margin-bottom: 18px;
+	}
+	.column(9);
+	
+	#fotos {
+		.column(2,9);
+		min-width: 140px;
+		
+		#foto-perfil {
+				padding-bottom: 18px;
+				border-bottom: 1px solid @lightcolor-40;
+		}
+		ul {
+			float: left;
+			width: 140px;
+			padding: 0;
+			margin: 18px 0;
+			li {
+				margin: 0 0 0px 10px;
+				float: left;
+				list-style: none;
+				padding-bottom: 18px;
+				a {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	#conteudo {
+		.column(7,9);
+		background-color: @lightcolor-20;
 	}
 }
 

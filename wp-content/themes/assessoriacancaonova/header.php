@@ -54,7 +54,7 @@
 		<header>
 			<div id="signature">
 				<a href="http://www.cancaonova.com" title="Portal Canção Nova" class="marca"><img src="<?php bloginfo( 'url' ) ?>/wp-content/themes/assessoriacancaonova/images/marca.png"></a>
-				<h1><a class="tipo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1><a class="tipo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Assessoria de Imprensa</a></h1>
 			</div>
 			<div id="menubar">
 				<nav id="menu-nav">
