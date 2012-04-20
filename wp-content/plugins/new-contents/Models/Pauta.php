@@ -20,7 +20,8 @@
                                             'menu_name' => 'Pautas'
                                         ),
                                     'public' => true,
-                                    'menu_position' => 5
+                                    'menu_position' => 5,
+                                    'has_archive' => true,
                                 );
 
                 static function add_pautas(){
