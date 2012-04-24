@@ -20,7 +20,9 @@
                                             'menu_name' => 'Notas Oficiais'
                                         ),
                                     'public' => true,
-                                    'menu_position' => 5
+                                    'menu_position' => 5,
+                                    'has_archive' => true,
+                                    'rewrite' => array( 'slug' => 'notas' )
                                 );
 
                 static function add_notas(){
