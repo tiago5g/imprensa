@@ -22,6 +22,7 @@
                                     'public' => true,
                                     'menu_position' => 5,
                                     'has_archive' => true,
+                                    'rewrite' => array( 'slug' => 'pautas' )
                                 );
 
                 static function add_pautas(){

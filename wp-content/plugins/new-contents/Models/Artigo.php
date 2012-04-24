@@ -22,6 +22,7 @@
                                     'public' => true,
                                     'menu_position' => 5,
                                     'has_archive' => true,
+                                    'rewrite' => array( 'slug' => 'artigos' )
                                 );
 
                 static function add_artigos(){
