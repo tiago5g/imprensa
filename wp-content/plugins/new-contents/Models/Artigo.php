@@ -17,10 +17,11 @@
                                             'not_found' =>  'Nenhum artigo encontrado',
                                             'not_found_in_trash' => 'Sem artigos na lixeira',
                                             'parent_item_colon' => '',
-                                            'menu_name' => 'Artigos'
+                                            'menu_name' => 'Artigos',
                                         ),
                                     'public' => true,
-                                    'menu_position' => 5
+                                    'menu_position' => 5,
+                                    'has_archive' => true,
                                 );
 
                 static function add_artigos(){
