@@ -27,7 +27,7 @@ get_header(); ?>
 					</a>
 					<span>Midia: </span>
 					<span>Formato: </span>
-				</li><!-- pauta -->
+				</li>
 
 				<li>
 					<time>12/12/2012</time>
@@ -36,7 +36,7 @@ get_header(); ?>
 					</a>
 					<span>Midia: </span>
 					<span>Formato: </span>
-				</li><!-- pauta -->
+				</li>
 
 				<li>
 					<time>12/12/2012</time>
@@ -45,7 +45,7 @@ get_header(); ?>
 					</a>
 					<span>Midia: </span>
 					<span>Formato: </span>
-				</li><!-- pauta -->
+				</li>
 
 				<li>
 					<time>12/12/2012</time>
@@ -54,12 +54,12 @@ get_header(); ?>
 					</a>
 					<span>Midia: </span>
 					<span>Formato: </span>
-				</li><!-- pauta -->
+				</li>
 			</ul>
 
 				<a href="#" class="ver-mais">Ver mais</a>
 
-		</div><!-- lista-pautas -->
+		</div>
 	</div> <!-- main -->
 
 <?php get_footer(); ?>

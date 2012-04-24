@@ -17,7 +17,7 @@ get_header(); ?>
 	<div id="container-content" class="main">
 		<div class="lista">
 
-			<h1>Artigos</h1>
+			<h1>Notas Oficiais</h1>
 			
 			<ul >	
 				<li>
@@ -26,7 +26,7 @@ get_header(); ?>
 						<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nunc lacus, ultrices non bibendum et, rutrum ac justo. Sed vitae turpis mauris, adipiscing lobortis lectus. Ut nec auctor turpis. Donec eleifend viverra massa sed pretium. Proin elit sem, gravida eu …</p>
 					</a>
-				</li><!-- pauta -->
+				</li>
 
 				<li>
 					<time>12/12/2012</time>
@@ -34,7 +34,7 @@ get_header(); ?>
 						<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nunc lacus, ultrices non bibendum et, rutrum ac justo. Sed vitae turpis mauris, adipiscing lobortis lectus. Ut nec auctor turpis. Donec eleifend viverra massa sed pretium. Proin elit sem, gravida eu …</p>
 					</a>
-				</li><!-- pauta -->
+				</li>
 
 				<li>
 					<time>12/12/2012</time>
@@ -42,7 +42,7 @@ get_header(); ?>
 						<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nunc lacus, ultrices non bibendum et, rutrum ac justo. Sed vitae turpis mauris, adipiscing lobortis lectus. Ut nec auctor turpis. Donec eleifend viverra massa sed pretium. Proin elit sem, gravida eu …</p>
 					</a>
-				</li><!-- pauta -->
+				</li>
 
 				<li>
 					<time>12/12/2012</time>
@@ -50,12 +50,12 @@ get_header(); ?>
 						<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nunc lacus, ultrices non bibendum et, rutrum ac justo. Sed vitae turpis mauris, adipiscing lobortis lectus. Ut nec auctor turpis. Donec eleifend viverra massa sed pretium. Proin elit sem, gravida eu …</p>
 					</a>
-				</li><!-- pauta -->
+				</li>
 			</ul>
 
 				<a href="#" class="ver-mais">Ver mais</a>
 
-		</div><!-- lista-pautas -->
+		</div>
 	</div> <!-- main -->
 
 <?php get_footer(); ?>
