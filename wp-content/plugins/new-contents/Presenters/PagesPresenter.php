@@ -28,8 +28,8 @@
            }
 
             static function build(){
-                            add_action('add_meta_boxes', 'NC\PagesPresenter::add_numbers');
-                            add_action( 'save_post', 'NC\PagesPresenter::save_numbers' );
+                            //add_action('add_meta_boxes', 'NC\PagesPresenter::add_numbers');
+                            //add_action( 'save_post', 'NC\PagesPresenter::save_numbers' );
             }
         }
 

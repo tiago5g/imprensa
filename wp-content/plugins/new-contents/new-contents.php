@@ -43,6 +43,21 @@
         require_once 'Presenters/PagesPresenter.php';           NC\PagesPresenter::build();
         require_once 'Models/Colaborador.php';                  NC\Colaborador::build();
         require_once 'Presenters/ColaboradoresPresenter.php';   NC\ColaboradoresPresenter::build();
+        require_once 'Models/Mailing.php' ;                     NC\Mailing::build() ;
+        require_once 'Presenters/MailingPresenter.php';         NC\MailingPresenter::build();
+        require_once 'Models/Acampamento.php' ;                 NC\Acampamento::build() ;
+        require_once 'Models/Credenciamento.php' ;              NC\Credenciamento::build() ;
+        require_once 'Presenters/CredenciamentosPresenter.php'; NC\CredenciamentosPresenter::build();
+
+        function backend_styles(){
+		global $plugin_url ; $screen = get_current_screen() ;
+                if($screen->post_type == 'mailing' || $screen->post_type == 'credenciamento'){
+                    wp_enqueue_style('hide', plugins_url('static/css/admin_hide.css', __FILE__)) ;
+                }
+		if($screen->post_type == 'mailing'){
+			wp_enqueue_style('mailing', plugins_url('static/css/mailing.css', __FILE__)) ;                        
+		}
+	}
 
         add_filter('init', array('NewContents','initialize'),0);
 ?>

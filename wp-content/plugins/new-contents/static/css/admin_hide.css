@@ -1,0 +1,8 @@
+#postcustom {display: none;}
+#menu-posts-mailing .wp-submenu .wp-submenu-wrap ul li .wp-first-item{display: block;}
+#menu-posts-mailing .wp-submenu .wp-submenu-wrap ul li a{display: none;}
+#menu-posts-credenciamento .wp-submenu .wp-submenu-wrap ul li .wp-first-item{display: block;}
+#menu-posts-credenciamento .wp-submenu .wp-submenu-wrap ul li a{display: none;}
+#menu-posts-credenciamento .wp-submenu .wp-submenu-wrap ul li:last-child a{display: block;}
+.add-new-h2 {display: none;}
+#screen-options-link-wrap {display: none;}

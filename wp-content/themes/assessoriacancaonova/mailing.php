@@ -1,45 +1,67 @@
 <?php
 /*
 Template Name: Mailing */
+
+if(isset($_POST['mailings'])){
+        $mailing = $_POST['mailings'];
+        $post = array(
+                'post_type' =>'mailing',
+                'post_title'=>$mailing['nome'],
+                'post_status' => 'publish',
+        );
+        $post_id = wp_insert_post($post);
+        update_post_meta($post_id, 'email', $mailing['email']);
+        update_post_meta($post_id, 'midia', $mailing['midia']);
+        update_post_meta($post_id, 'tel1', $mailing['tel1']);
+        update_post_meta($post_id, 'tel2', $mailing['tel2']);
+        update_post_meta($post_id, 'estado', $mailing['estado']);
+        update_post_meta($post_id, 'cidade', $mailing['cidade']);
+
+        $success = "Dados cadastrados com sucesso!";
+}
 // css
 wp_enqueue_style( 'jscrollbar', get_stylesheet_directory_uri() . '/library/styles/jScrollbar.jquery.css');
 //Javascript de apoio
-//wp_enqueue_script( 'validate', get_stylesheet_directory_uri() . '/library/js/jquery.validate.min.js', array( 'jquery' ));
-wp_enqueue_script( 'class_registration', get_stylesheet_directory_uri() . '/library/js/class_registration.js', array( 'jquery' ));
+wp_enqueue_script( 'validate', get_stylesheet_directory_uri() . '/library/js/jquery.validate.min.js', array( 'jquery' ));
 wp_enqueue_script( 'jqueryui', get_stylesheet_directory_uri() . '/library/js/jquery-ui-1.8.19.min.js', array( 'jquery' ));
 wp_enqueue_script( 'jquery-mousewheel', get_stylesheet_directory_uri() . '/library/js/jquery-mousewheel.js', array( 'jquery' ));
 wp_enqueue_script( 'jScrollbar', get_stylesheet_directory_uri() . '/library/js/jScrollbar.jquery.js', array( 'jquery' ));
+wp_enqueue_script( 'class_registration', get_stylesheet_directory_uri() . '/library/js/class_registration.js', array( 'jquery' ));
 get_header(); ?>
 
 
 	<div id="container-content" role="main">
 		<div id="mailing">
 			<h1>Credenciamento para Mailing</h1>
-			<div id="form">
-				<form action="" method="post">
+                        <?php if($success!=""): ?>
+                        <div><span class="sucess"><?php echo $success; ?></span></div>
+                        <?php endif ?>
+			<div id="form">                                
+				<form id="form-mailing" action="" method="post">
+                                        <div class="RegisterErrors"></div>
 					<div class="nome">
 						<h2>Nome</h2>
-						<input type="text" name="nome">
+						<input type="text" name="mailings[nome]" class="required">
 					</div>
-					<div class="email">
+					<div class="e-mail">
 						<h2>e-mail</h2>
-						<input type="text" name="email">
+						<input type="text" name="mailings[email]" class="required email">
 					</div>
 					<div class="midia">
 						<h2>Midia de Comunica&ccedil;&atilde;o</h2>
-						<input type="text" name="midia">
+						<input type="text" name="mailings[midia]">
 					</div>
 					<div class="telefone1">
-						<h2>Telefone 1</h2>
-						<input type="text" name="midia">
+                                                <h2>Telefone 1</h2>
+						<input type="text" name="mailings[tel1]" class="required">
 					</div>
 					<div class="telefone2">
 						<h2>Telefone 2</h2>
-						<input type="text" name="midia">
+						<input type="text" name="mailings[tel2]">
 					</div>
 					<div class="estado">
 						<h2>Estado</h2>
-						<select name="estado">
+						<select name="mailings[estado]">
 							<option value='AC'>Acre</option>
                                                         <option value='AL'>Alagoas</option>
                                                         <option value='AM'>Amazonas</option>
@@ -71,13 +93,14 @@ get_header(); ?>
 					</div>
 					<div class="cidade">
 						<h2>Cidade</h2>
-						<input type="text" name="cidade">
+						<input type="text" name="mailings[cidade]" class="required">
 					</div>
+                                        <div class="clr"></div>
 					<div class="validacao">
-						<input type="checkbox" name="validacao">
+						<input type="checkbox" name="mailings[validacao]" value="ok" class="required">
 						<span>Li e aceito os termos de cadastro</span>
 					</div>
-					<button type="button">Enviar</button> 
+					<input type="submit" name="enviar-imagem" value="Enviar"/>
 				</form>
 			</div>
 
