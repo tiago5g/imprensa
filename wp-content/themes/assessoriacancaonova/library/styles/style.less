@@ -973,6 +973,92 @@ nav#access,
 	}
 }
 
+#perfil-evento {
+
+	h1 {
+		margin-bottom: 18px;
+	}
+	.column(9);
+	
+	#fotos {
+		.column(2,9);
+		min-width: 140px;
+		
+		#foto-perfil {
+				padding-bottom: 18px;
+				border-bottom: 1px solid @lightcolor-40;
+		}
+		ul {
+			float: left;
+			width: 140px;
+			padding: 0;
+			margin: 18px 0;
+			li {
+				margin: 0 0 0px 10px;
+				float: left;
+				list-style: none;
+				padding-bottom: 18px;
+				a {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	#conteudo {
+		.column(7,9);
+		background-color: @lightcolor-20;
+	}
+}
+
+//////////// PAUTAS ////////////
+
+.lista {
+	.column(12);
+	h1 {
+		margin-bottom: 18px;
+	}
+	
+	ul {
+		.column(8,12);
+		padding-left: 0;
+		list-style: none;
+		
+		li {
+
+			margin-bottom: 36px;
+			a {
+				h2 {
+					font-size: 16px;
+					font-color: @color-20;
+					margin: 5px 0;
+				}
+				p {
+					margin: 0;
+					color: @darkcolor-10;
+				}
+				&:hover { 
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	a.ver-mais {
+			line-height: 36px;
+			height: 36px;
+			font-size: 16px;
+			color: @darkcolor-20;
+			background-color: @lightcolor-30;
+			display: block;
+			text-align: center;
+			.column(8,12);
+			&:hover {
+				background-color: @lightcolor-40;
+			}
+		}
+}
+
 //////////// CATEGORIA ////////////
 
 .category {
