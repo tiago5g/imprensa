@@ -27,12 +27,12 @@ get_header(); ?>
 				</header>
 				<?php wp_nav_menu( array( 'container_class' => '', 'theme_location' => '', 'menu' => 'quick' ) ); ?>
 			</section>
-			<section id="mailing">
+                        <a href="<?php echo home_url();?>/mailing"><section id="mailing">
 				<header>
 					<h3>Cadastro Mailing</h3>
 				</header>
 				<p>Cadastre-se para receber conteúdo em primeira mão.</p>
-			</section>
+			</section></a>
 
 		</section><!-- #side -->
 

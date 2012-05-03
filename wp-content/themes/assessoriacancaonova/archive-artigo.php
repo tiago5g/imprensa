@@ -11,51 +11,79 @@
  * @subpackage Boilerplate
  * @since Boilerplate 1.0
  */
-
 get_header(); ?>
 
 	<div id="container-content" class="main">
 		<div class="lista">
 
 			<h1>Artigos</h1>
+			<?php query_posts( array ( 'post_type' => 'artigo', 'posts_per_page' => 4 ) ); ?>
+                        <ul>
+                        <?php while ( have_posts() ) : the_post(); ?>
+                        <?php $id = get_the_ID();
+                              $category = get_the_terms($id,'tipos-artigos');
+                        ?>
 			
-			<ul >	
 				<li>
-					<time>12/12/2012</time>
-					<a href="#">
-						<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nunc lacus, ultrices non bibendum et, rutrum ac justo. Sed vitae turpis mauris, adipiscing lobortis lectus. Ut nec auctor turpis. Donec eleifend viverra massa sed pretium. Proin elit sem, gravida eu …</p>
+					<time><?php echo get_the_date('d/m/Y'); ?></time>
+                                        <?php foreach($category as $cat){?>
+                                        <span><?php echo $cat->name; ?></span>
+                                        <?php }?>
+					<a href="<?php the_permalink(); ?>">
+						<h2><?php the_title(); ?></h2>
+						<?php $content = get_the_content(); ?>
+                                                <?php $content = substr($content, 0, 110);?>
+                                                <?php $content .='...'; ?>
+                                                <p><?php echo $content; ?></p>
 					</a>
 				</li>
-
-				<li>
-					<time>12/12/2012</time>
-					<a href="#">
-						<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nunc lacus, ultrices non bibendum et, rutrum ac justo. Sed vitae turpis mauris, adipiscing lobortis lectus. Ut nec auctor turpis. Donec eleifend viverra massa sed pretium. Proin elit sem, gravida eu …</p>
-					</a>
-				</li>
-
-				<li>
-					<time>12/12/2012</time>
-					<a href="#">
-						<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nunc lacus, ultrices non bibendum et, rutrum ac justo. Sed vitae turpis mauris, adipiscing lobortis lectus. Ut nec auctor turpis. Donec eleifend viverra massa sed pretium. Proin elit sem, gravida eu …</p>
-					</a>
-				</li>
-
-				<li>
-					<time>12/12/2012</time>
-					<a href="#">
-						<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nunc lacus, ultrices non bibendum et, rutrum ac justo. Sed vitae turpis mauris, adipiscing lobortis lectus. Ut nec auctor turpis. Donec eleifend viverra massa sed pretium. Proin elit sem, gravida eu …</p>
-					</a>
-				</li>
+                        <?php endwhile; ?>
 			</ul>
-
-				<a href="#" class="ver-mais">Ver mais</a>
-
+				<a href="#content-footer" id="ver-mais" class="ver-mais">Ver mais</a>
 		</div>
 	</div> <!-- main -->
 
-<?php get_footer(); ?>
+<?php get_footer(); do_action( 'wp_ajax_nopriv_' . $_REQUEST['action'] );?>
+
+<script type="text/javascript" >
+jQuery(document).ready(function($) {
+        var $win = $(window);
+        var pag = 1;
+        jQuery('.ver-mais').live("click",function() {
+            pag++;
+            var data = {
+                    action: 'cn-paginate',
+                    paged: pag
+            };
+
+            jQuery.post('<?php echo  admin_url( 'admin-ajax.php' )?>', data, function(response) {
+                if(response!="vazio"){
+                    $('.lista ul').append(response);
+                    $('html,body').animate({scrollTop: $("#content-footer").offset().top}, 1750);
+                }else{
+                    $('#ver-mais').hide();
+                }
+            });
+
+        });
+
+
+        jQuery(window).scroll(function() {  
+            if($win.height() + $win.scrollTop() == $(document).height()){
+                pag++;
+                var data = {
+                    action: 'cn-paginate',
+                    paged: pag
+                };
+
+                jQuery.post('<?php echo  admin_url( 'admin-ajax.php' )?>', data, function(response) {
+                    if(response!="vazio"){
+                        $('.lista ul').append(response);
+                    }else{
+                        $('#ver-mais').hide();
+                    }
+                });
+            }else{}
+        });
+});
+</script>

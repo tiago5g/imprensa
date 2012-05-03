@@ -41,7 +41,10 @@
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                     <h4><?php the_title(); ?></h4>
                     <div class="entry-content">
-                            <p><?php the_excerpt(); ?></p>
+                            <?php $content = get_the_content(); ?>
+                            <?php $content = substr($content, 0, 110);?>
+                            <?php $content .='...'; ?>
+                            <p><?php echo $content; ?></p>
                     </div>
             </a>
 </article>
@@ -49,5 +52,5 @@
 
 
 <footer>
-    <span><a href="<?php echo get_category_link(get_cat_id("Artigos")); ?>" title="">veja mais</a></span>
+    <span><a href="<?php echo home_url();?>/artigos" title="">veja mais</a></span>
 </footer>
