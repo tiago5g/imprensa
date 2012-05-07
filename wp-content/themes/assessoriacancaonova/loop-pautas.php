@@ -18,14 +18,6 @@
  * @since Boilerplate 1.0
  */
 ?>
-
-
-<header>
-        <h3>Pautas</h3>
-</header>
-
-
-
 <?php query_posts( array ( 'post_type' => 'pauta', 'posts_per_page' => 3 ) ); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
@@ -44,8 +36,3 @@
 </article>
 
 <?php endwhile; ?>
-
-
-<footer>
-        <span><a href="<?php echo home_url();?>/pautas" title="">veja mais</a></span>
-</footer>

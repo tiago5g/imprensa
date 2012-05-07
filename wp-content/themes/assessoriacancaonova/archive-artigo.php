@@ -53,7 +53,9 @@ jQuery(document).ready(function($) {
             pag++;
             var data = {
                     action: 'cn-paginate',
-                    paged: pag
+                    paged: pag,
+                    qtd: 4,
+                    tipo: 'artigo' 
             };
 
             jQuery.post('<?php echo  admin_url( 'admin-ajax.php' )?>', data, function(response) {
@@ -73,7 +75,10 @@ jQuery(document).ready(function($) {
                 pag++;
                 var data = {
                     action: 'cn-paginate',
-                    paged: pag
+                    paged: pag,
+                    qtd:   4,
+                    tipo:  'artigo'
+                    
                 };
 
                 jQuery.post('<?php echo  admin_url( 'admin-ajax.php' )?>', data, function(response) {

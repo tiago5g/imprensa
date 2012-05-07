@@ -27,27 +27,27 @@ add_action( 'wp_ajax_nopriv_cn-paginate', 'paginate_callback' );
 add_action( 'wp_ajax_cn-paginate', 'paginate_callback' );
 
 function paginate_callback() {
-query_posts(array ( 'post_type' => 'artigo', 'posts_per_page' => 4, 'paged' => $_POST['paged'] ));
+query_posts(array ( 'post_type' => $_POST['tipo'], 'posts_per_page' => $_POST['qtd'], 'paged' => $_POST['paged'] ));
 
 if(have_posts()){
 while ( have_posts() ) : the_post();
 $id = get_the_ID();
 $category = get_the_terms($id,'tipos-artigos');
-
-
 ?>
 <li>
            
                     <time><?php echo get_the_date('d/m/Y'); ?></time>
-                    <?php foreach($category as $cat){?>
-                    <span><?php echo $cat->name; ?></span>
-                    <?php }?>
+                    <?php if($_POST['tipo']=='artigo'):?>
+                        <?php foreach($category as $cat){?>
+                        <span><?php echo $cat->name; ?></span>
+                        <?php }?>
+                    <?php endif ?>
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                    <h4><?php the_title(); ?></h4>
+                    <h2><?php the_title(); ?></h2>
                             <?php $content = get_the_content(); ?>
                             <?php $content = substr($content, 0, 110);?>
                             <?php $content .='...'; ?>
-                            <p><?php echo $content; ?></p>
+                            <p><?php echo $content;?></p>
             </a>
 </li>
 <?php endwhile; ?>

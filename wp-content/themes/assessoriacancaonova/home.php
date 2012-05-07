@@ -37,10 +37,22 @@ get_header(); ?>
 		</section><!-- #side -->
 
 		<section id="ultimas-pautas">
-        	<?php get_template_part( 'loop', 'pautas' );?>
+                        <header>
+                            <h3>Pautas</h3>
+                        </header>
+                        <?php get_template_part( 'loop', 'pautas' );?>
+                        <footer>
+                             <span><a href="<?php echo home_url();?>/pautas" title="">veja mais</a></span>
+                        </footer>
 		</section><!-- #ultimas-pautas -->
-		<section id="ultimos-artigos">				
+		<section id="ultimos-artigos">
+                        <header>
+                                <h3>Artigos</h3>
+                        </header>
 			<?php get_template_part( 'loop', 'artigos' );?>
+                        <footer>
+                            <span><a href="<?php echo home_url();?>/artigos" title="">veja mais</a></span>
+                        </footer>
 		</section><!-- #ultimos-artigos -->
 
 		<section id="destaque-fotos">

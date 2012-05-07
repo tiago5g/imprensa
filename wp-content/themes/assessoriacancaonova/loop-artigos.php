@@ -18,11 +18,6 @@
  * @since Boilerplate 1.0
  */
 ?>
-<header>
-        <h3>Artigos</h3>
-</header>
-
-
 
 <?php query_posts( array ( 'post_type' => 'artigo', 'posts_per_page' => 3 ) ); ?>
 
@@ -49,8 +44,3 @@
             </a>
 </article>
 <?php endwhile; ?>
-
-
-<footer>
-    <span><a href="<?php echo home_url();?>/artigos" title="">veja mais</a></span>
-</footer>
